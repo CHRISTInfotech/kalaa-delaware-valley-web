@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, Contact, Gallery } from 'lucide-react';
+import { Users, Contact, Users as Community } from 'lucide-react';
 
 const benefits = [
   {
@@ -14,7 +14,7 @@ const benefits = [
     description: "Participate in cultural celebrations and programs"
   },
   {
-    icon: Gallery,
+    icon: Community,
     title: "25+ Years of Cultural Heritage",
     description: "Be part of preserving Kerala's rich traditions"
   },
