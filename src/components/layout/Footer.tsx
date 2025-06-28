@@ -1,0 +1,71 @@
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Facebook, Instagram, Mail } from 'lucide-react';
+
+export const Footer = () => {
+  return (
+    <footer className="bg-kerala-blue text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo and Description */}
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="w-12 h-12 bg-white rounded-full border-2 border-kerala-gold p-1">
+                <div className="w-full h-full bg-kerala-gold rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">കലാ</span>
+                </div>
+              </div>
+              <div>
+                <div className="text-xl font-serif font-bold text-kerala-gold">കലാ</div>
+                <div className="text-sm">Malayali Association of Delaware Valley</div>
+              </div>
+            </div>
+            <p className="text-sm text-gray-200 max-w-md">
+              Celebrating Kerala's vibrant culture and traditions in the heart of Delaware Valley. 
+              Join our community that brings together the Malayalee diaspora to preserve heritage 
+              and create lasting connections.
+            </p>
+            <div className="flex space-x-4 mt-4">
+              <a href="#" className="text-gray-200 hover:text-kerala-gold transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-kerala-gold transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="mailto:info@kalaa.org" className="text-gray-200 hover:text-kerala-gold transition-colors">
+                <Mail className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4 text-kerala-gold">Quick Links</h3>
+            <ul className="space-y-2">
+              <li><Link to="/" className="text-gray-200 hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-gray-200 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/events/upcoming" className="text-gray-200 hover:text-white transition-colors">Events</Link></li>
+              <li><Link to="/gallery" className="text-gray-200 hover:text-white transition-colors">Gallery</Link></li>
+              <li><Link to="/membership" className="text-gray-200 hover:text-white transition-colors">Membership</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4 text-kerala-gold">Contact</h3>
+            <div className="space-y-2 text-sm text-gray-200">
+              <p>Delaware Valley, PA</p>
+              <p>Email: info@kalaa.org</p>
+              <p>Phone: (555) 123-4567</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-600 mt-8 pt-8 text-center text-sm text-gray-200">
+          <p>&copy; {new Date().getFullYear()} KALAA - Malayali Association of Delaware Valley. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
