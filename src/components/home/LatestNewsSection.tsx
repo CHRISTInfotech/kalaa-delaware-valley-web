@@ -22,34 +22,34 @@ const news = [
 export const LatestNewsSection = () => {
   return (
     <div>
-      <h2 className="text-3xl font-serif font-bold text-kerala-blue mb-8">Latest News</h2>
+      <h2 className="text-3xl font-serif font-bold text-kerala-gold mb-8">Latest News</h2>
       {news.length > 0 ? (
         <div className="space-y-6">
           {news.map((item) => (
-            <Card key={item.id} className="hover:shadow-lg transition-shadow">
+            <Card key={item.id} className="hover:shadow-lg transition-shadow bg-white">
               <CardHeader>
-                <CardTitle className="text-lg">{item.title}</CardTitle>
-                <CardDescription>{item.date}</CardDescription>
+                <CardTitle className="text-lg text-black">{item.title}</CardTitle>
+                <CardDescription className="text-gray-600">{item.date}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">{item.description}</p>
-                <Button variant="outline" size="sm">
+                <p className="text-black mb-4">{item.description}</p>
+                <Button variant="outline" size="sm" className="text-kerala-blue border-kerala-blue hover:bg-kerala-blue hover:text-white">
                   Read More
                 </Button>
               </CardContent>
             </Card>
           ))}
           <Link to="/news">
-            <Button className="w-full bg-kerala-blue hover:bg-kerala-blue/90">
+            <Button className="w-full bg-kerala-blue hover:bg-kerala-blue/90 text-white">
               View All News
             </Button>
           </Link>
         </div>
       ) : (
         <div className="text-center py-8">
-          <p className="text-gray-500 mb-4">No recent news available</p>
+          <p className="text-black mb-4">No recent news available</p>
           <Link to="/news">
-            <Button variant="outline">View News Page</Button>
+            <Button variant="outline" className="text-kerala-blue border-kerala-blue hover:bg-kerala-blue hover:text-white">View News Page</Button>
           </Link>
         </div>
       )}

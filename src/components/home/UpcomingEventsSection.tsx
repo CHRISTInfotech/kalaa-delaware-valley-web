@@ -20,11 +20,11 @@ const upcomingEvents = [
 export const UpcomingEventsSection = () => {
   return (
     <div>
-      <h2 className="text-3xl font-serif font-bold text-kerala-red mb-8">Upcoming Events</h2>
+      <h2 className="text-3xl font-serif font-bold text-kerala-gold mb-8">Upcoming Events</h2>
       {upcomingEvents.length > 0 ? (
         <div className="space-y-6">
           {upcomingEvents.map((event) => (
-            <Card key={event.id} className="hover:shadow-lg transition-shadow">
+            <Card key={event.id} className="hover:shadow-lg transition-shadow bg-white">
               <div className="relative h-48 rounded-t-lg overflow-hidden">
                 <img 
                   src={event.image} 
@@ -36,10 +36,10 @@ export const UpcomingEventsSection = () => {
                 </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-lg">{event.title}</CardTitle>
+                <CardTitle className="text-lg text-black">{event.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2 text-sm text-gray-600">
+                <div className="space-y-2 text-sm text-black">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-2 text-kerala-gold" />
                     <span>{event.date}</span>
@@ -52,23 +52,23 @@ export const UpcomingEventsSection = () => {
                     <span>{event.location}</span>
                   </div>
                 </div>
-                <Button className="w-full mt-4 bg-kerala-red hover:bg-kerala-red/90">
+                <Button className="w-full mt-4 bg-kerala-red hover:bg-kerala-red/90 text-white">
                   Learn More & Register
                 </Button>
               </CardContent>
             </Card>
           ))}
           <Link to="/events/upcoming">
-            <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90">
+            <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 text-white">
               View All Upcoming Events
             </Button>
           </Link>
         </div>
       ) : (
         <div className="text-center py-8">
-          <p className="text-gray-500 mb-4">No upcoming events at this time</p>
+          <p className="text-black mb-4">No upcoming events at this time</p>
           <Link to="/events/upcoming">
-            <Button variant="outline">Check Events Page</Button>
+            <Button variant="outline" className="text-kerala-blue border-kerala-blue hover:bg-kerala-blue hover:text-white">Check Events Page</Button>
           </Link>
         </div>
       )}

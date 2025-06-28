@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, Calendar, Heart, Award } from 'lucide-react';
+import { Users, Calendar, Heart, Trophy } from 'lucide-react';
 
 const benefits = [
   {
@@ -19,7 +19,7 @@ const benefits = [
     description: "Be part of preserving Kerala's rich traditions"
   },
   {
-    icon: Award,
+    icon: Trophy,
     title: "10+ Community Partners",
     description: "Support our community initiatives and growth"
   }
@@ -35,14 +35,14 @@ export const WhyJoinSection = () => {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-kerala-red mb-6">
               Why You Should Join KALAA
             </h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-lg text-black mb-8 leading-relaxed">
               At the KALAA, we are more than just a community; we are a family that celebrates 
               the vibrant culture and traditions of Kerala in the heart of Ontario, Canada. As a 
               non-profit cultural organization, we bring together the Malayalee diaspora in 
               Kitchener, Waterloo, Cambridge, and Guelph areas to create a strong, supportive, 
               and inclusive community.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-black leading-relaxed">
               By choosing us, you gain access to cultural enrichment, a platform to preserve 
               heritage, and opportunities to connect, grow, and contribute meaningfully to society. 
               Join us in celebrating unity, diversity, and the spirit of Kerala, away from home!
@@ -59,7 +59,7 @@ export const WhyJoinSection = () => {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-kerala-blue mb-2">{benefit.title}</h3>
-                <p className="text-sm text-gray-600">{benefit.description}</p>
+                <p className="text-sm text-black">{benefit.description}</p>
               </div>
             ))}
           </div>

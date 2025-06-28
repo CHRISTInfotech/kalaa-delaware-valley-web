@@ -8,13 +8,13 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 27 38 44;
+    --foreground: 0 0 0;
 
     --card: 255 255 255;
-    --card-foreground: 27 38 44;
+    --card-foreground: 0 0 0;
 
     --popover: 255 255 255;
-    --popover-foreground: 27 38 44;
+    --popover-foreground: 0 0 0;
 
     --primary: 34 89 156;
     --primary-foreground: 255 255 255;
@@ -81,12 +81,13 @@
   }
 
   body {
-    @apply bg-white text-foreground font-sans;
+    @apply bg-white text-black font-sans;
     font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    @apply text-black;
   }
 }
 
