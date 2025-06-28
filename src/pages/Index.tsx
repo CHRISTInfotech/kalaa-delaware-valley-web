@@ -8,11 +8,11 @@ import { UpcomingEventsSection } from '@/components/home/UpcomingEventsSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <HeroCarousel />
       <WhyJoinSection />
       <VisionMissionSection />
-      <div className="bg-muted py-16">
+      <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <LatestNewsSection />

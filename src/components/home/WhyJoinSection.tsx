@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, Contact, Users as Community } from 'lucide-react';
+import { Users, Calendar, Heart, Award } from 'lucide-react';
 
 const benefits = [
   {
@@ -9,18 +9,18 @@ const benefits = [
     description: "Join a thriving community of Malayalees"
   },
   {
-    icon: Contact,
-    title: "20+ Achieved Events",
+    icon: Calendar,
+    title: "20+ Annual Events",
     description: "Participate in cultural celebrations and programs"
   },
   {
-    icon: Community,
-    title: "25+ Years of Cultural Heritage",
+    icon: Heart,
+    title: "25+ Years of Heritage",
     description: "Be part of preserving Kerala's rich traditions"
   },
   {
-    icon: Users,
-    title: "10+ Sponsors",
+    icon: Award,
+    title: "10+ Community Partners",
     description: "Support our community initiatives and growth"
   }
 ];
@@ -52,10 +52,10 @@ export const WhyJoinSection = () => {
           {/* Right Stats Grid */}
           <div className="grid grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-muted rounded-lg hover:shadow-lg transition-shadow">
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-100">
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-kerala-gold/10 flex items-center justify-center">
-                    <benefit.icon className="h-8 w-8 text-kerala-gold" />
+                  <div className="w-16 h-16 rounded-full bg-kerala-blue/10 flex items-center justify-center">
+                    <benefit.icon className="h-8 w-8 text-kerala-blue" />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-kerala-blue mb-2">{benefit.title}</h3>

@@ -1,11 +1,10 @@
 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, MapPin, Users, Clock, ArrowLeft, Mail, Phone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Calendar, MapPin, Users, Clock, ArrowLeft } from 'lucide-react';
 
-// This would typically come from an API or database
 const eventDetails = {
   1: {
     title: "Onam Celebration 2025",
@@ -17,24 +16,42 @@ const eventDetails = {
     image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop",
     registrationRequired: true,
     fee: "$25 per person",
-    program: [
+    fullDescription: "Experience the joy and tradition of Onam with our community! This grand celebration will feature authentic Kerala cuisine with a traditional Sadya (feast) served on banana leaves, cultural performances including Thiruvathira dance, Kaikottikali, and classical music. We'll also have a Pookalam (flower carpet) competition and traditional games for all ages.",
+    schedule: [
       "6:00 PM - Registration and Welcome",
-      "6:30 PM - Traditional Onam Sadya",
-      "8:00 PM - Cultural Programs Begin",
-      "8:30 PM - Thiruvathira Dance",
-      "9:15 PM - Folk Songs and Stories",
+      "6:30 PM - Pookalam Competition",
+      "7:00 PM - Cultural Performances",
+      "8:00 PM - Traditional Sadya",
+      "9:00 PM - Community Activities",
       "10:00 PM - Closing Ceremony"
-    ],
-    contact: {
-      email: "events@kalaa.org",
-      phone: "(555) 123-4567"
-    }
+    ]
+  },
+  2: {
+    title: "Malayalam New Year - Medam 1st",
+    date: "April 14, 2025",
+    time: "5:00 PM - 9:00 PM",
+    location: "KALAA Community Center, Delaware Valley",
+    participants: "150+ expected",
+    description: "Celebrate the Malayalam New Year with traditional rituals, cultural performances, and community feast.",
+    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=400&fit=crop",
+    registrationRequired: true,
+    fee: "$20 per person",
+    fullDescription: "Welcome the Malayalam New Year (Vishu) with us! Join our community for traditional Vishukkani arrangements, cultural performances, and a delicious feast featuring traditional Kerala dishes.",
+    schedule: [
+      "5:00 PM - Registration and Welcome",
+      "5:30 PM - Vishukkani Viewing",
+      "6:00 PM - Cultural Performances",
+      "7:00 PM - Traditional Feast",
+      "8:00 PM - Community Games",
+      "9:00 PM - Closing"
+    ]
   }
 };
 
 const EventDetail = () => {
   const { id } = useParams();
-  const event = eventDetails[id as keyof typeof eventDetails];
+  const eventId = Number(id);
+  const event = eventDetails[eventId as keyof typeof eventDetails];
 
   if (!event) {
     return (
@@ -50,25 +67,20 @@ const EventDetail = () => {
   }
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="mb-8">
-          <Link to="/events/upcoming">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Upcoming Events
-            </Button>
-          </Link>
-        </div>
+        <Link to="/events/upcoming" className="inline-flex items-center text-kerala-blue hover:text-kerala-gold mb-8">
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Back to Events
+        </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Content */}
           <div className="lg:col-span-2">
-            <div className="mb-8">
-              <img
-                src={event.image}
+            <div className="relative h-64 md:h-96 rounded-lg overflow-hidden mb-8">
+              <img 
+                src={event.image} 
                 alt={event.title}
-                className="w-full h-64 md:h-80 object-cover rounded-lg"
+                className="w-full h-full object-cover"
               />
             </div>
 
@@ -78,83 +90,63 @@ const EventDetail = () => {
                 <CardDescription className="text-lg">{event.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-kerala-blue mb-4">Event Program</h3>
-                    <ul className="space-y-2">
-                      {event.program.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-kerala-gold mr-3">•</span>
-                          <span className="text-gray-700">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <p className="text-gray-700 leading-relaxed mb-6">{event.fullDescription}</p>
+                
+                <h3 className="text-xl font-semibold text-kerala-blue mb-4">Event Schedule</h3>
+                <ul className="space-y-2">
+                  {event.schedule.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-kerala-gold mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
-            <Card>
+          <div className="lg:col-span-1">
+            <Card className="sticky top-24">
               <CardHeader>
                 <CardTitle className="text-kerala-blue">Event Details</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Calendar className="h-5 w-5 mr-3 text-kerala-gold" />
-                    <span className="font-medium">{event.date}</span>
+              <CardContent className="space-y-4">
+                <div className="flex items-center text-gray-600">
+                  <Calendar className="h-5 w-5 mr-3 text-kerala-gold" />
+                  <div>
+                    <div className="font-medium">{event.date}</div>
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="h-5 w-5 mr-3 text-kerala-gold" />
-                    <span>{event.time}</span>
-                  </div>
-                  <div className="flex items-start">
-                    <MapPin className="h-5 w-5 mr-3 text-kerala-gold mt-0.5" />
-                    <span>{event.location}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Users className="h-5 w-5 mr-3 text-kerala-gold" />
-                    <span>{event.participants}</span>
-                  </div>
-                  {event.fee && (
-                    <div className="pt-2 border-t">
-                      <span className="font-semibold text-kerala-red">Registration Fee: {event.fee}</span>
-                    </div>
-                  )}
                 </div>
+                <div className="flex items-center text-gray-600">
+                  <Clock className="h-5 w-5 mr-3 text-kerala-gold" />
+                  <span>{event.time}</span>
+                </div>
+                <div className="flex items-start text-gray-600">
+                  <MapPin className="h-5 w-5 mr-3 text-kerala-gold mt-0.5" />
+                  <span>{event.location}</span>
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <Users className="h-5 w-5 mr-3 text-kerala-gold" />
+                  <span>{event.participants}</span>
+                </div>
+                
+                {event.fee && (
+                  <div className="pt-4 border-t">
+                    <div className="text-kerala-red font-semibold text-lg">
+                      Registration Fee: {event.fee}
+                    </div>
+                  </div>
+                )}
+
+                {event.registrationRequired && (
+                  <div className="pt-4">
+                    <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 text-white">
+                      Register Now
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
-
-            {event.registrationRequired && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-kerala-blue">Registration</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 mb-4">
-                    Register Now
-                  </Button>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Registration deadline: 3 days before the event
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center">
-                      <Mail className="h-4 w-4 mr-2 text-kerala-gold" />
-                      <a href={`mailto:${event.contact.email}`} className="text-kerala-blue hover:underline">
-                        {event.contact.email}
-                      </a>
-                    </div>
-                    <div className="flex items-center">
-                      <Phone className="h-4 w-4 mr-2 text-kerala-gold" />
-                      <span>{event.contact.phone}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
           </div>
         </div>
       </div>
