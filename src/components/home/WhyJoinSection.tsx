@@ -32,7 +32,7 @@ export const WhyJoinSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-kerala-red mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-red-600 mb-6">
               Why You Should Join KALAA
             </h2>
             <p className="text-lg text-black mb-8 leading-relaxed">
