@@ -1,25 +1,24 @@
 
 import React from 'react';
-import { Users, Calendar, Heart, Trophy } from 'lucide-react';
 
 const benefits = [
   {
-    icon: Users,
+    icon: "https://cdn-icons-png.flaticon.com/128/3135/3135715.png",
     title: "350+",
     description: "Active Members"
   },
   {
-    icon: Calendar,
+    icon: "https://cdn-icons-png.flaticon.com/128/1049/1049160.png",
     title: "20+",
     description: "Achieved Events"
   },
   {
-    icon: Heart,
+    icon: "https://cdn-icons-png.flaticon.com/128/2921/2921222.png",
     title: "25+",
     description: "Years of Cultural Heritage"
   },
   {
-    icon: Trophy,
+    icon: "https://cdn-icons-png.flaticon.com/128/942/942748.png",
     title: "10+",
     description: "Sponsors"
   }
@@ -52,11 +51,13 @@ export const WhyJoinSection = () => {
           {/* Right Stats Grid */}
           <div className="grid grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-gray-100 rounded-lg hover:shadow-lg transition-shadow border border-gray-200">
+              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100 h-full">
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                    <benefit.icon className="h-8 w-8 text-blue-600" />
-                  </div>
+                  <img 
+                    src={benefit.icon} 
+                    alt={benefit.description}
+                    className="w-20 h-20 object-contain"
+                  />
                 </div>
                 <h3 className="text-3xl font-bold text-black mb-2">{benefit.title}</h3>
                 <p className="text-sm text-gray-600">{benefit.description}</p>
