@@ -5,23 +5,23 @@ import { Users, Calendar, Heart, Trophy } from 'lucide-react';
 const benefits = [
   {
     icon: Users,
-    title: "350+ Active Members",
-    description: "Join a thriving community of Malayalees"
+    title: "350+",
+    description: "Active Members"
   },
   {
     icon: Calendar,
-    title: "20+ Annual Events",
-    description: "Participate in cultural celebrations and programs"
+    title: "20+",
+    description: "Achieved Events"
   },
   {
     icon: Heart,
-    title: "25+ Years of Heritage",
-    description: "Be part of preserving Kerala's rich traditions"
+    title: "25+",
+    description: "Years of Cultural Heritage"
   },
   {
     icon: Trophy,
-    title: "10+ Community Partners",
-    description: "Support our community initiatives and growth"
+    title: "10+",
+    description: "Sponsors"
   }
 ];
 
@@ -52,14 +52,14 @@ export const WhyJoinSection = () => {
           {/* Right Stats Grid */}
           <div className="grid grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow border border-gray-100">
+              <div key={index} className="text-center p-6 bg-gray-100 rounded-lg hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-kerala-blue/10 flex items-center justify-center">
-                    <benefit.icon className="h-8 w-8 text-kerala-blue" />
+                  <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
+                    <benefit.icon className="h-8 w-8 text-blue-600" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-kerala-blue mb-2">{benefit.title}</h3>
-                <p className="text-sm text-black">{benefit.description}</p>
+                <h3 className="text-3xl font-bold text-black mb-2">{benefit.title}</h3>
+                <p className="text-sm text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>
