@@ -31,27 +31,30 @@ export const Navbar = () => {
   const NavLink = ({ to, children, className = "" }: { to: string; children: React.ReactNode; className?: string }) => (
     <Link
       to={to}
-      className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-kerala-gold/10 ${
-        isActive(to) 
-          ? 'text-kerala-gold border-b-2 border-kerala-gold' 
+      className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-kerala-gold/10 ${isActive(to)
+          ? 'text-kerala-gold border-b-2 border-kerala-gold'
           : 'text-black hover:text-kerala-gold'
-      } ${className}`}
+        } ${className}`}
     >
       {children}
     </Link>
   );
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
+    <nav className="sticky  w-full bg-white shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 md:h-24 items-center justify-between">
+
           {/* Logo and Brand */}
           <Link to="/" className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-white rounded-full border-2 border-kerala-gold p-1">
-              <div className="w-full h-full bg-kerala-gold rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xs">കലാ</span>
-              </div>
+            <div className="w-18 h-20">
+              <img
+                src="/src/components/images/kalaa logo.jpg"
+                alt="Kalaa Logo"
+               className="w-full h-full object-cover"
+              />
             </div>
+
             <div className="hidden md:block">
               <div className="text-lg font-serif font-bold text-kerala-gold">കലാ</div>
               <div className="text-xs text-gray-600">Malayali Association of Delaware Valley</div>
@@ -62,13 +65,12 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center space-x-1">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About Us</NavLink>
-            
+
             {/* Events Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className={`px-3 py-2 text-sm font-medium ${
-                  isActive('/events') ? 'text-kerala-gold' : 'text-black hover:text-kerala-gold'
-                }`}>
+                <Button variant="ghost" className={`px-3 py-2 text-sm font-medium ${isActive('/events') ? 'text-kerala-gold' : 'text-black hover:text-kerala-gold'
+                  }`}>
                   Events <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
