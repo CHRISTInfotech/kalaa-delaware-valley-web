@@ -33,7 +33,7 @@ export const LatestNewsSection = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-black mb-4">{item.description}</p>
-                <Button variant="outline" size="sm" className="text-kerala-blue border-kerala-blue hover:bg-kerala-blue hover:text-white">
+                <Button variant="outline" size="sm" className="text-yellow-600 border-yellow-600 hover:bg-yellow-600 hover:text-white">
                   Read More
                 </Button>
               </CardContent>
