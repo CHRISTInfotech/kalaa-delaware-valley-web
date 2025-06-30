@@ -56,18 +56,18 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16 bg-white">
       <div className="container mx-auto px-4">
         {!selectedEvent ? (
           <>
-            <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
+            <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
               Event Gallery
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {eventCollections.map((event) => (
                 <Card 
                   key={event.id} 
-                  className="cursor-pointer hover:shadow-lg transition-shadow"
+                  className="cursor-pointer hover:shadow-lg transition-shadow bg-white border border-gray-200"
                   onClick={() => openEventGallery(event)}
                 >
                   <CardContent className="p-0">
@@ -94,12 +94,12 @@ const Gallery = () => {
               <Button 
                 variant="ghost" 
                 onClick={closeEventGallery}
-                className="mr-4"
+                className="mr-4 text-black hover:text-kerala-gold"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Gallery
               </Button>
-              <h1 className="text-3xl font-serif font-bold text-kerala-blue">
+              <h1 className="text-3xl font-serif font-bold text-kerala-gold">
                 {selectedEvent.name}
               </h1>
             </div>
@@ -107,7 +107,7 @@ const Gallery = () => {
               {selectedEvent.images.map((image, index) => (
                 <div 
                   key={index}
-                  className="cursor-pointer hover:shadow-lg transition-shadow rounded-lg overflow-hidden"
+                  className="cursor-pointer hover:shadow-lg transition-shadow rounded-lg overflow-hidden bg-white border border-gray-200"
                   onClick={() => openImageModal(image)}
                 >
                   <img

@@ -34,16 +34,16 @@ const upcomingEvents = [
 
 const UpcomingEvents = () => {
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
+        <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           Upcoming Events
         </h1>
         
         {upcomingEvents.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {upcomingEvents.map((event) => (
-              <Card key={event.id} className="hover:shadow-lg transition-shadow">
+              <Card key={event.id} className="hover:shadow-lg transition-shadow bg-white border border-gray-200">
                 <div className="relative h-48 rounded-t-lg overflow-hidden">
                   <img 
                     src={event.image} 
@@ -56,20 +56,20 @@ const UpcomingEvents = () => {
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-kerala-blue">{event.title}</CardTitle>
-                  <CardDescription className="text-base">{event.description}</CardDescription>
+                  <CardTitle className="text-xl text-black">{event.title}</CardTitle>
+                  <CardDescription className="text-base text-gray-600">{event.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-black">
                       <Calendar className="h-4 w-4 mr-3 text-kerala-gold" />
                       <span className="font-medium">{event.date}</span>
                     </div>
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-black">
                       <Clock className="h-4 w-4 mr-3 text-kerala-gold" />
                       <span>{event.time}</span>
                     </div>
-                    <div className="flex items-start text-gray-600">
+                    <div className="flex items-start text-black">
                       <MapPin className="h-4 w-4 mr-3 text-kerala-gold mt-0.5" />
                       <span>{event.location}</span>
                     </div>
@@ -83,12 +83,12 @@ const UpcomingEvents = () => {
                   
                   <div className="space-y-2">
                     <Link to={`/events/${event.id}`}>
-                      <Button className="w-full bg-kerala-blue hover:bg-kerala-blue/90">
+                      <Button className="w-full bg-kerala-blue hover:bg-kerala-blue/90 text-white">
                         View Details
                       </Button>
                     </Link>
                     {event.registrationRequired && (
-                      <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90">
+                      <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 text-white">
                         Register Now
                       </Button>
                     )}
@@ -99,8 +99,8 @@ const UpcomingEvents = () => {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-xl text-gray-500 mb-4">No upcoming events at this time</p>
-            <p className="text-gray-400">Check back soon for exciting Malayalam cultural events!</p>
+            <p className="text-xl text-black mb-4">No upcoming events at this time</p>
+            <p className="text-gray-600">Check back soon for exciting Malayalam cultural events!</p>
           </div>
         )}
       </div>

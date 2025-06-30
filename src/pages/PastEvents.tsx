@@ -50,15 +50,15 @@ const pastEvents = [
 
 const PastEvents = () => {
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
+        <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           Past Events
         </h1>
         
         <div className="space-y-8">
           {pastEvents.map((event) => (
-            <Card key={event.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={event.id} className="overflow-hidden hover:shadow-lg transition-shadow bg-white border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-1">
                   <div className="h-64 lg:h-full">
@@ -71,27 +71,27 @@ const PastEvents = () => {
                 </div>
                 <div className="lg:col-span-2 p-6">
                   <CardHeader className="p-0 mb-4">
-                    <CardTitle className="text-2xl text-kerala-blue mb-2">{event.title}</CardTitle>
-                    <CardDescription className="text-base">{event.description}</CardDescription>
+                    <CardTitle className="text-2xl text-black mb-2">{event.title}</CardTitle>
+                    <CardDescription className="text-base text-gray-600">{event.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="p-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                       <div className="space-y-2">
-                        <div className="flex items-center text-gray-600">
+                        <div className="flex items-center text-black">
                           <Calendar className="h-4 w-4 mr-3 text-kerala-gold" />
                           <span className="font-medium">{event.date}</span>
                         </div>
-                        <div className="flex items-start text-gray-600">
+                        <div className="flex items-start text-black">
                           <MapPin className="h-4 w-4 mr-3 text-kerala-gold mt-0.5" />
                           <span>{event.location}</span>
                         </div>
-                        <div className="flex items-center text-gray-600">
+                        <div className="flex items-center text-black">
                           <Users className="h-4 w-4 mr-3 text-kerala-gold" />
                           <span>{event.participants}</span>
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-kerala-blue mb-2">Event Highlights:</h4>
+                        <h4 className="font-semibold text-black mb-2">Event Highlights:</h4>
                         <ul className="text-sm text-gray-600 space-y-1">
                           {event.highlights.map((highlight, index) => (
                             <li key={index} className="flex items-start">

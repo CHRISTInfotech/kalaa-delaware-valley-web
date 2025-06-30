@@ -37,15 +37,15 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
+        <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           Our Team
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+            <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-white border border-gray-200">
               <CardContent className="p-6">
                 <div className="relative mx-auto w-32 h-32 mb-4">
                   <img
@@ -54,7 +54,7 @@ const Team = () => {
                     className="w-full h-full object-cover rounded-full border-4 border-kerala-gold"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-kerala-blue mb-2">
+                <h3 className="text-xl font-semibold text-black mb-2">
                   {member.name}
                 </h3>
                 <p className="text-kerala-gold font-medium">
