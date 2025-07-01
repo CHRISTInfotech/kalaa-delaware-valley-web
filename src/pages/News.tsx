@@ -53,7 +53,7 @@ const News = () => {
   return (
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
+        <h1 className="text-4xl font-serif text-black font-bold text-center mb-16">
           News & Updates
         </h1>
 
@@ -68,7 +68,7 @@ const News = () => {
                     alt={featuredNews.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-kerala-gold text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const News = () => {
                     <p className="text-gray-700 leading-relaxed mb-6">
                       {featuredNews.content}
                     </p>
-                    <Button className="bg-kerala-blue hover:bg-kerala-blue/90">
+                    <Button className="bg-white hover:bg-/90">
                       Read Full Story
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -136,21 +136,6 @@ const News = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="mt-16 text-center">
-          <Card className="max-w-md mx-auto bg-kerala-blue text-white">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-semibold mb-4">Stay Updated</h3>
-              <p className="mb-6 text-gray-100">
-                Subscribe to our newsletter for the latest news and event updates.
-              </p>
-              <Button className="bg-kerala-gold hover:bg-kerala-gold/90 text-kerala-blue font-medium">
-                Subscribe Now
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>

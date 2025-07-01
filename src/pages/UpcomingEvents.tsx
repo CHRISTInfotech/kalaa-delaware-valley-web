@@ -14,19 +14,19 @@ const upcomingEvents = [
     location: "Community Hall, 123 Main St, Philadelphia, PA",
     participants: "200+ expected",
     description: "Join us for the grand Onam celebration with traditional Sadya, cultural programs, and Thiruvathira dance.",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=200&fit=crop",
+    image: "/src/components/images/onam.jpg",
     registrationRequired: true,
     fee: "$25 per person"
   },
   {
     id: 2,
-    title: "Malayalam New Year - Medam 1st",
+    title: "X-mas Celebration 2025",
     date: "April 14, 2025",
     time: "5:00 PM - 9:00 PM",
     location: "KALAA Community Center, Delaware Valley",
     participants: "150+ expected",
-    description: "Celebrate the Malayalam New Year with traditional rituals, cultural performances, and community feast.",
-    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=200&fit=crop",
+    description: "A symbol for Jesus Christ's birth, join us for a festive evening with music, dance, and a special Christmas feast.",
+    image: "/src/components/images/xmas.jpeg",
     registrationRequired: true,
     fee: "$20 per person"
   }

@@ -32,7 +32,7 @@ export const WhyJoinSection = () => {
           {/* Left Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-red-600 mb-6">
-              Why You Should Join KALAA
+              Why You Should Join KALAA !
             </h2>
             <p className="text-lg text-black mb-8 leading-relaxed">
               At the KALAA, we are more than just a community; we are a family that celebrates 

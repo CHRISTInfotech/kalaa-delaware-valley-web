@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Calendar, Heart, Star } from 'lucide-react';
+import { UserPlus } from 'lucide-react';
 
 const membershipBenefits = [
   "Access to all KALAA cultural events and celebrations",
@@ -50,30 +51,8 @@ const Membership = () => {
         <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
           Membership
         </h1>
-
-        {/* Introduction */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-2xl font-serif font-bold text-kerala-red mb-6">
-            Join Our Growing Community
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Become a part of KALAA and connect with the vibrant Malayalam community in the Delaware Valley. 
-            Our membership offers you the opportunity to celebrate Kerala's rich culture, participate in 
-            meaningful events, and build lasting friendships.
-          </p>
-          <div className="bg-muted p-6 rounded-lg">
-            <p className="text-kerala-blue font-semibold">
-              "KALAA has been our home away from home for over 45 years, bringing together families 
-              and preserving our beautiful Malayalam heritage."
-            </p>
-          </div>
-        </div>
-
         {/* Membership Types */}
         <div className="mb-16">
-          <h2 className="text-3xl font-serif font-bold text-kerala-blue text-center mb-12">
-            Membership Options
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {membershipTypes.map((membership, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
@@ -124,41 +103,30 @@ const Membership = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Card className="max-w-2xl mx-auto bg-kerala-blue text-white">
+          <Card className="max-w-2xl mx-auto bg-kerala-blue text-black">
             <CardContent className="p-12">
-              <h2 className="text-3xl font-serif font-bold mb-6">Ready to Join?</h2>
-              <p className="text-lg mb-8 text-gray-100">
-                Take the first step towards becoming part of our amazing community. 
+              <h2 className="text-3xl text-black font-bold mb-6">Ready to Join?</h2>
+              <p className="text-lg mb-8 text-black">
+                Take the first step towards becoming part of our amazing community.
                 Fill out our membership application and start your journey with KALAA today.
               </p>
               <Link to="/membership/apply">
-                <Button size="lg" className="bg-kerala-gold hover:bg-kerala-gold/90 text-kerala-blue font-semibold">
-                  Apply for Membership
-                </Button>
+                <div className="flex justify-center mt-6">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white font-semibold shadow-lg rounded-full px-6 py-3 flex items-center gap-2"
+                  >
+                    <UserPlus className="w-5 h-5" />
+                    Apply for Membership
+                  </Button>
+                </div>
               </Link>
             </CardContent>
           </Card>
         </div>
 
         {/* Contact Information */}
-        <div className="mt-16 text-center">
-          <h3 className="text-xl font-semibold text-kerala-blue mb-4">
-            Questions about Membership?
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Contact our membership committee for more information
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="mailto:membership@kalaa.org" 
-              className="text-kerala-blue hover:text-kerala-gold"
-            >
-              membership@kalaa.org
-            </a>
-            <span className="hidden sm:inline text-gray-400">|</span>
-            <span className="text-gray-600">(555) 123-4567</span>
-          </div>
-        </div>
+
       </div>
     </div>
   );

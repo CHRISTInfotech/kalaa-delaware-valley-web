@@ -1,28 +1,23 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const carouselData = [
   {
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1200&h=600&fit=crop",
+    image: "src/components/images/1.jpg",
     quote: "Celebrating the rich heritage and vibrant culture of Kerala",
-    description: "Join us in preserving our traditions for future generations"
   },
   {
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=600&fit=crop",
+    image: "src/components/images/2.jpg",
     quote: "Unity in diversity, strength in community",
-    description: "Building bridges and fostering connections across Delaware Valley"
   },
   {
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=1200&h=600&fit=crop",
+    image: "src/components/images/3.jpg",
     quote: "Where tradition meets modernity",
-    description: "Embracing our roots while growing together in America"
   },
   {
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=600&fit=crop",
+    image: "src/components/images/4.jpg",
     quote: "കേരളത്തിന്റെ സംസ്കാരം, അമേരിക്കയിൽ",
-    description: "Keeping the spirit of Kerala alive, away from home"
   }
 ];
 
@@ -74,15 +69,12 @@ export const HeroCarousel = () => {
           <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 animate-fade-in">
             {carouselData[currentSlide].quote}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 animate-fade-in">
-            {carouselData[currentSlide].description}
-          </p>
-          <Button 
+          {/* <Button 
             size="lg" 
             className="bg-kerala-gold hover:bg-kerala-gold/90 text-white px-8 py-3 animate-fade-in"
           >
             Join Our Community
-          </Button>
+          </Button> */}
         </div>
       </div>
 

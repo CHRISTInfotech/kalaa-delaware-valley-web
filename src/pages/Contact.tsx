@@ -63,11 +63,11 @@ const Contact = () => {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-kerala-gold/10 p-3 rounded-full">
-                      <Mail className="h-6 w-6 text-kerala-gold" />
+                    <div className="bg-white p-3 rounded-full">
+                      <Mail className="h-6 w-6 text-black" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-kerala-blue mb-1">Email</h3>
+                      <h3 className="font-semibold text-black mb-1">Email</h3>
                       <p className="text-gray-600">info@kalaa.org</p>
                       <p className="text-gray-600">events@kalaa.org</p>
                     </div>

@@ -94,7 +94,7 @@ const MembershipForm = () => {
         <div className="max-w-4xl mx-auto">
           <Card>
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl text-kerala-blue">Membership Application Form</CardTitle>
+              <CardTitle className="text-3xl text-kerala-blue mb-2">Membership Application Form</CardTitle>
               <CardDescription className="text-lg">
                 Join the KALAA community and become part of our Malayalam family
               </CardDescription>

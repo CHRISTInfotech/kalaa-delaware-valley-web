@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: "Priya Nair",
     position: "Vice President",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b192?w=300&h=300&fit=crop&crop=face"
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face"
   },
   {
     name: "Suresh Menon",
