@@ -12,7 +12,7 @@ const About = () => {
           {/* Image Section */}
           <div>
             <img
-              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop"
+              src="src/components/images/group.png"
               alt="KALAA Community"
               className="w-full h-80 object-cover rounded-2xl shadow-md"
             />

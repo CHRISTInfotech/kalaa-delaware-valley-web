@@ -11,7 +11,7 @@ const pastEvents = [
     location: "Community Hall, Philadelphia, PA",
     participants: "250+ attendees",
     description: "A grand celebration of Onam with traditional Sadya, cultural programs, and Thiruvathira dance performances.",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=200&fit=crop",
+    image: "/src/components/images/onam.jpg",
     highlights: [
       "Traditional Onam Sadya for 250+ people",
       "Pookalam competition with 15+ participants",
@@ -25,7 +25,7 @@ const pastEvents = [
     location: "KALAA Community Center, Delaware Valley",
     participants: "180+ attendees",
     description: "Malayalam New Year celebration with Vishukkani, traditional feast, and cultural programs.",
-    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=200&fit=crop",
+    image: "/src/components/images/vishu 1.jpeg",
     highlights: [
       "Traditional Vishukkani arrangement",
       "Kaikottikali dance performance",
@@ -39,7 +39,7 @@ const pastEvents = [
     location: "Community Hall, Philadelphia, PA",
     participants: "200+ attendees",
     description: "Festive Christmas celebration with carols, cultural programs, and community dinner.",
-    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=200&fit=crop",
+    image: "/src/components/images/xmas.jpeg",
     highlights: [
       "Christmas carol singing competition",
       "Cultural dance performances",

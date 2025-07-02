@@ -8,29 +8,31 @@ const eventCollections = [
   {
     id: 1,
     name: "Onam Celebration 2024",
-    coverImage: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop",
+    coverImage: "src/components/images/onam.jpg",
     images: [
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop"
+      "src/components/images/onam.jpg",
+      "src/components/images/3.jpg",
+      "src/components/images/onam.jpg"
     ]
   },
   {
     id: 2,
     name: "Vishu Festival 2024",
-    coverImage: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop",
+    coverImage: "src/components/images/vishu 1.jpeg",
     images: [
-      "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop"
+      "src/components/images/vishu 3.jpeg",
+      "src/components/images/kannikonna.jpeg",
+      "src/components/images/katta.jpeg"
     ]
   },
   {
     id: 3,
     name: "Christmas Celebration 2023",
-    coverImage: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=300&fit=crop",
+    coverImage: "src/components/images/xmas.jpeg",
     images: [
-      "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&h=600&fit=crop"
+      "src/components/images/xmas image.jpg",
+      "src/components/images/xmas.jpeg",
+      "src/components/images/cake.jpeg"
     ]
   }
 ];

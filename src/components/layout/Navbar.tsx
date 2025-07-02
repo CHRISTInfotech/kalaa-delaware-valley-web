@@ -31,7 +31,7 @@ export const Navbar = () => {
   const NavLink = ({ to, children, className = "" }: { to: string; children: React.ReactNode; className?: string }) => (
     <Link
       to={to}
-      className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-kerala-gold/10 ${isActive(to)
+      className={`px-3 py-2 rounded-md text-base font-medium transition-all duration-200 hover:bg-kerala-gold/10 ${isActive(to)
           ? 'text-kerala-gold border-b-2 border-kerala-gold'
           : 'text-black hover:text-kerala-gold'
         } ${className}`}
@@ -47,16 +47,16 @@ export const Navbar = () => {
 
           {/* Logo and Brand */}
           <Link to="/" className="flex items-center space-x-4">
-            <div className="w-18 h-20">
+            <div className="w-25 h-24">
               <img
                 src="/src/components/images/kalaa logo.jpg"
                 alt="Kalaa Logo"
-               className="w-full h-full object-cover"
+               className="w-full h-full object-contain"
               />
             </div>
 
             <div className="hidden md:block">
-              <div className="text-lg font-serif font-bold text-kerala-gold">കലാ</div>
+              <div className="text-2xl font-serif font-bold text-kerala-gold">കലാ</div>
               <div className="text-xs text-gray-600">Malayali Association of Delaware Valley</div>
             </div>
           </Link>
@@ -69,7 +69,7 @@ export const Navbar = () => {
             {/* Events Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className={`px-3 py-2 text-sm font-medium ${isActive('/events') ? 'text-kerala-gold' : 'text-black hover:text-kerala-gold'
+                <Button variant="ghost" className={`px-3 py-2 text-base font-medium ${isActive('/events') ? 'text-kerala-gold' : 'text-black hover:text-kerala-gold'
                   }`}>
                   Events <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
