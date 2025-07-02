@@ -1,6 +1,12 @@
-
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import emailjs from 'emailjs-com';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,26 +22,49 @@ const Contact = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    // For now, we'll just show an alert
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    setLoading(true);
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message
+    };
+
+    emailjs
+      .send(
+        'service_nwsw6vd', // 🔁 Replace with your EmailJS service ID
+        'template_9dys5nr', // 🔁 Replace with your EmailJS template ID
+        templateParams,
+        'tcrEt3k1ti2NzxTg3' // 🔁 Replace with your EmailJS public key
+      )
+      .then(() => {
+        alert('Thank you! Your message has been sent.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        setLoading(false);
+      })
+      .catch((error) => {
+        alert('Oops! Something went wrong. Please try again.');
+        console.error('EmailJS Error:', error);
+        setLoading(false);
+      });
   };
 
   return (
@@ -53,9 +82,9 @@ const Contact = () => {
                 Get in Touch
               </h2>
               <p className="text-gray-700 leading-relaxed mb-8">
-                We'd love to hear from you! Whether you have questions about membership, 
-                upcoming events, or want to get involved with our community, don't hesitate 
-                to reach out to us.
+                We'd love to hear from you! Whether you have questions about
+                membership, upcoming events, or want to get involved with our
+                community, don't hesitate to reach out to us.
               </p>
             </div>
 
@@ -82,7 +111,9 @@ const Contact = () => {
                       <Phone className="h-6 w-6 text-kerala-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-kerala-blue mb-1">Phone</h3>
+                      <h3 className="font-semibold text-kerala-blue mb-1">
+                        Phone
+                      </h3>
                       <p className="text-gray-600">(555) 123-4567</p>
                       <p className="text-gray-600">(555) 123-4568 (Events)</p>
                     </div>
@@ -97,10 +128,14 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-kerala-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-kerala-blue mb-1">Address</h3>
+                      <h3 className="font-semibold text-kerala-blue mb-1">
+                        Address
+                      </h3>
                       <p className="text-gray-600">
-                        KALAA Community Center<br />
-                        123 Main Street<br />
+                        KALAA Community Center
+                        <br />
+                        123 Main Street
+                        <br />
                         Philadelphia, PA 19103
                       </p>
                     </div>
@@ -115,10 +150,14 @@ const Contact = () => {
                       <Clock className="h-6 w-6 text-kerala-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-kerala-blue mb-1">Office Hours</h3>
+                      <h3 className="font-semibold text-kerala-blue mb-1">
+                        Office Hours
+                      </h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 9:00 AM - 5:00 PM<br />
-                        Saturday: 10:00 AM - 2:00 PM<br />
+                        Monday - Friday: 9:00 AM - 5:00 PM
+                        <br />
+                        Saturday: 10:00 AM - 2:00 PM
+                        <br />
                         Sunday: Closed
                       </p>
                     </div>
@@ -132,9 +171,12 @@ const Contact = () => {
           <div>
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-kerala-blue">Send us a Message</CardTitle>
+                <CardTitle className="text-2xl text-kerala-blue">
+                  Send us a Message
+                </CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we'll get back to you as soon as
+                  possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -209,9 +251,10 @@ const Contact = () => {
                   <Button
                     type="submit"
                     className="w-full bg-kerala-blue hover:bg-kerala-blue/90"
+                    disabled={loading}
                   >
                     <Send className="mr-2 h-4 w-4" />
-                    Send Message
+                    {loading ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
               </CardContent>
