@@ -1,10 +1,24 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Users, Calendar, Heart, Star } from 'lucide-react';
-import { UserPlus } from 'lucide-react';
+import {
+  Check,
+  Users,
+  Calendar,
+  Heart,
+  Star,
+  UserPlus,
+  Gift,
+  Info,
+  Smile,
+} from 'lucide-react';
 
 const membershipBenefits = [
   "Access to all KALAA cultural events and celebrations",
@@ -46,16 +60,23 @@ const membershipTypes = [
 
 const Membership = () => {
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen bg-gray-50 py-16">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
-          Membership
-        </h1>
+        {/* Page Heading */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-serif font-bold text-kerala-blue mb-4">Become a Member</h1>
+          <p className="text-gray-700 text-lg">Join a vibrant community that celebrates Malayali culture in America</p>
+        </div>
+
         {/* Membership Types */}
-        <div className="mb-16">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-kerala-blue text-center mb-10 flex justify-center items-center gap-3">
+            <Gift className="text-kerala-gold" />
+            Membership Plans
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {membershipTypes.map((membership, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow border-2 border-gray-200">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 bg-kerala-gold/10 rounded-full flex items-center justify-center mb-4">
                     <membership.icon className="h-8 w-8 text-kerala-gold" />
@@ -71,22 +92,23 @@ const Membership = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Benefits */}
-        <div className="mb-16">
+        {/* Membership Benefits */}
+        <section className="mb-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-serif font-bold text-kerala-blue mb-8">
+              <h2 className="text-3xl font-bold text-kerala-blue mb-8 flex items-center gap-3">
+                <Smile className="text-kerala-gold" />
                 Membership Benefits
               </h2>
               <div className="space-y-4">
                 {membershipBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="bg-kerala-gold/10 rounded-full p-1 mr-4 mt-1">
-                      <Check className="h-4 w-4 text-kerala-gold" />
+                    <div className="bg-kerala-gold/10 rounded-full p-2 mr-4 mt-1">
+                      <Check className="h-5 w-5 text-kerala-gold" />
                     </div>
-                    <span className="text-gray-700">{benefit}</span>
+                    <span className="text-gray-700 text-base">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -99,14 +121,14 @@ const Membership = () => {
               />
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <Card className="max-w-2xl mx-auto bg-kerala-blue text-black">
+        <section className="text-center">
+          <Card className="max-w-2xl mx-auto bg-kerala-blue text-black border-none shadow-xl">
             <CardContent className="p-12">
-              <h2 className="text-3xl text-black font-bold mb-6">Ready to Join?</h2>
-              <p className="text-lg mb-8 text-black">
+              <h2 className="text-3xl font-bold mb-6">Ready to Join?</h2>
+              <p className="text-lg mb-8">
                 Take the first step towards becoming part of our amazing community.
                 Fill out our membership application and start your journey with KALAA today.
               </p>
@@ -123,10 +145,7 @@ const Membership = () => {
               </Link>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Contact Information */}
-
+        </section>
       </div>
     </div>
   );
