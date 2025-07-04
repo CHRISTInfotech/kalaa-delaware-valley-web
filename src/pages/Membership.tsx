@@ -127,7 +127,7 @@ const Membership = () => {
         <section className="text-center">
           <Card className="max-w-2xl mx-auto bg-kerala-blue text-black border-none shadow-xl">
             <CardContent className="p-12">
-              <h2 className="text-3xl font-bold mb-6">Ready to Join?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-black">Ready to Join?</h2>
               <p className="text-lg mb-8">
                 Take the first step towards becoming part of our amazing community.
                 Fill out our membership application and start your journey with KALAA today.

@@ -17,6 +17,10 @@ const carouselData = [
   },
   {
     image: "src/components/images/4.jpg",
+    quote: "Rooted in Culture, Rising with Unity",
+  },
+    {
+    image: "src/components/images/boat.jpg",
     quote: "കേരളത്തിന്റെ സംസ്കാരം, അമേരിക്കയിൽ",
   }
 ];

@@ -39,14 +39,14 @@ const UpcomingEvents = () => {
         <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           Upcoming Events
         </h1>
-        
+
         {upcomingEvents.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {upcomingEvents.map((event) => (
               <Card key={event.id} className="hover:shadow-lg transition-shadow bg-white border border-gray-200">
                 <div className="relative h-48 rounded-t-lg overflow-hidden">
-                  <img 
-                    src={event.image} 
+                  <img
+                    src={event.image}
                     alt={event.title}
                     className="w-full h-full object-cover"
                   />
@@ -80,17 +80,20 @@ const UpcomingEvents = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   <div className="space-y-2">
-                    <Link to={`/events/${event.id}`}>
-                      <Button className="w-full bg-kerala-blue hover:bg-kerala-blue/90 text-white">
-                        View Details
-                      </Button>
+                    <Link
+                      to={`/events/${event.id}`}
+                      className="w-full inline-block bg-kerala-blue hover:bg-kerala-blue/90 text-black text-center py-2 px-4 rounded-md font-medium"
+                    >
+                      View Details
                     </Link>
+
                     {event.registrationRequired && (
-                      <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 text-white">
+                      <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 text-blue-600">
                         Register Now
                       </Button>
+
                     )}
                   </div>
                 </CardContent>
