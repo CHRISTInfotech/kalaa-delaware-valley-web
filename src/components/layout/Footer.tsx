@@ -31,16 +31,17 @@ export const Footer = () => {
               and create lasting connections.
             </p>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-black hover:text-kerala-gold transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="#" className="text-black transition-colors">
+                <Facebook className="h-5 w-5 text-black" />
               </a>
-              <a href="#" className="text-black hover:text-kerala-gold transition-colors">
-                <Instagram className="h-5 w-5" />
+              <a href="#" className="text-black transition-colors">
+                <Instagram className="h-5 w-5 text-black" />
               </a>
-              <a href="mailto:info@kalaa.org" className="text-black hover:text-kerala-gold transition-colors">
-                <Mail className="h-5 w-5" />
+              <a href="mailto:info@kalaa.org" className="text-black transition-colors">
+                <Mail className="h-5 w-5 text-black" />
               </a>
             </div>
+
           </div>
 
           {/* Quick Links */}

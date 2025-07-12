@@ -89,7 +89,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <Card>
+              <Card className="border-2 border-dark-blue">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-white p-3 rounded-full">
@@ -104,16 +104,14 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-2 border-dark-blue">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-kerala-gold/10 p-3 rounded-full">
                       <Phone className="h-6 w-6 text-kerala-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-kerala-blue mb-1">
-                        Phone
-                      </h3>
+                      <h3 className="font-semibold text-kerala-blue mb-1">Phone</h3>
                       <p className="text-gray-600">(555) 123-4567</p>
                       <p className="text-gray-600">(555) 123-4568 (Events)</p>
                     </div>
@@ -121,16 +119,14 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-2 border-dark-blue">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-kerala-gold/10 p-3 rounded-full">
                       <MapPin className="h-6 w-6 text-kerala-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-kerala-blue mb-1">
-                        Address
-                      </h3>
+                      <h3 className="font-semibold text-kerala-blue mb-1">Address</h3>
                       <p className="text-gray-600">
                         KALAA Community Center
                         <br />
@@ -143,16 +139,14 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-2 border-dark-blue">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-kerala-gold/10 p-3 rounded-full">
                       <Clock className="h-6 w-6 text-kerala-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-kerala-blue mb-1">
-                        Office Hours
-                      </h3>
+                      <h3 className="font-semibold text-kerala-blue mb-1">Office Hours</h3>
                       <p className="text-gray-600">
                         Monday - Friday: 9:00 AM - 5:00 PM
                         <br />
@@ -165,25 +159,28 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
+
           </div>
 
           {/* Contact Form */}
-          <div>
-            <Card>
+          <div className="max-w-3xl mx-auto p-4">
+            <Card className="border-2 border-dark-blue shadow-md rounded-xl bg-white">
               <CardHeader>
                 <CardTitle className="text-2xl text-kerala-blue">
                   Send us a Message
                 </CardTitle>
-                <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as
-                  possible.
+                <CardDescription className="text-gray-600">
+                  Fill out the form below and we'll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
+
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name">
+                        Full Name <span className="text-red-600">*</span>
+                      </Label>
                       <Input
                         id="name"
                         name="name"
@@ -195,7 +192,9 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email">
+                        Email Address <span className="text-red-600">*</span>
+                      </Label>
                       <Input
                         id="email"
                         name="email"
@@ -221,7 +220,9 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="subject">Subject *</Label>
+                      <Label htmlFor="subject">
+                        Subject <span className="text-red-600">*</span>
+                      </Label>
                       <Input
                         id="subject"
                         name="subject"
@@ -235,7 +236,9 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="message">Message *</Label>
+                    <Label htmlFor="message">
+                      Message <span className="text-red-600">*</span>
+                    </Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -248,14 +251,17 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full bg-kerala-blue hover:bg-kerala-blue/90"
-                    disabled={loading}
-                  >
-                    <Send className="mr-2 h-4 w-4" />
-                    {loading ? 'Sending...' : 'Send Message'}
-                  </Button>
+                  <div className="flex justify-center">
+                    <Button
+                      type="submit"
+                      className="flex items-center gap-2 px-5 py-2 rounded-full text-white font-semibold shadow-md bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all duration-200"
+                      disabled={loading}
+                    >
+                      <Send className="h-4 w-4" />
+                      {loading ? 'Sending...' : 'Send Message'}
+                    </Button>
+                  </div>
+
                 </form>
               </CardContent>
             </Card>

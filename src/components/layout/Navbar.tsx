@@ -54,7 +54,7 @@ export const Navbar = () => {
         <div className="flex h-24 items-center justify-between">
           {/* Left: Logo and Brand (increased size) */}
           <Link to="/" className="flex items-center space-x-4">
-            <div className="w-32 h-28">
+            <div className="w-32 h-24">
               <img
                 src="/src/components/images/kalaa logo.jpg"
                 alt="Kalaa Logo"
