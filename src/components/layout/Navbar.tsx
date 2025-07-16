@@ -51,10 +51,10 @@ export const Navbar = () => {
   return (
     <nav className="sticky w-full bg-white shadow-sm z-50">
       <div className="w-full px-4">
-        <div className="flex h-24 items-center justify-between">
+        <div className="flex items-center justify-between">
           {/* Left: Logo and Brand (increased size) */}
           <Link to="/" className="flex items-center space-x-4">
-            <div className="w-32 h-24">
+            <div className="w-32 h-26">
               <img
                 src="/src/components/images/kalaa logo.jpg"
                 alt="Kalaa Logo"
