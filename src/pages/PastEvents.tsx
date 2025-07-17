@@ -1,6 +1,11 @@
-
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card';
 import { Calendar, MapPin, Users } from 'lucide-react';
 
 const pastEvents = [
@@ -10,7 +15,8 @@ const pastEvents = [
     date: "September 14, 2024",
     location: "Community Hall, Philadelphia, PA",
     participants: "250+ attendees",
-    description: "A grand celebration of Onam with traditional Sadya, cultural programs, and Thiruvathira dance performances.",
+    description:
+      "A grand celebration of Onam with traditional Sadya, cultural programs, and Thiruvathira dance performances.",
     image: "/src/components/images/onam.jpg",
     highlights: [
       "Traditional Onam Sadya for 250+ people",
@@ -24,7 +30,8 @@ const pastEvents = [
     date: "April 15, 2024",
     location: "KALAA Community Center, Delaware Valley",
     participants: "180+ attendees",
-    description: "Malayalam New Year celebration with Vishukkani, traditional feast, and cultural programs.",
+    description:
+      "Malayalam New Year celebration with Vishukkani, traditional feast, and cultural programs.",
     image: "/src/components/images/vishu 1.jpeg",
     highlights: [
       "Traditional Vishukkani arrangement",
@@ -38,7 +45,8 @@ const pastEvents = [
     date: "December 23, 2023",
     location: "Community Hall, Philadelphia, PA",
     participants: "200+ attendees",
-    description: "Festive Christmas celebration with carols, cultural programs, and community dinner.",
+    description:
+      "Festive Christmas celebration with carols, cultural programs, and community dinner.",
     image: "/src/components/images/xmas.jpeg",
     highlights: [
       "Christmas carol singing competition",
@@ -55,24 +63,33 @@ const PastEvents = () => {
         <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           Past Events
         </h1>
-        
+
         <div className="space-y-8">
           {pastEvents.map((event) => (
-            <Card key={event.id} className="overflow-hidden hover:shadow-lg transition-shadow bg-white border border-gray-200">
+            <Card
+              key={event.id}
+              className="overflow-hidden hover:shadow-lg transition-shadow bg-white border border-gray-200"
+            >
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-1">
-                  <div className="h-64 lg:h-full">
-                    <img 
-                      src={event.image} 
+                  {/* Fixed image size and uniform display */}
+                  <div className="w-full h-64 lg:h-80 overflow-hidden">
+                    <img
+                      src={event.image}
                       alt={event.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </div>
+
                 <div className="lg:col-span-2 p-6">
                   <CardHeader className="p-0 mb-4">
-                    <CardTitle className="text-2xl text-black mb-2">{event.title}</CardTitle>
-                    <CardDescription className="text-base text-gray-600">{event.description}</CardDescription>
+                    <CardTitle className="text-2xl text-black mb-2">
+                      {event.title}
+                    </CardTitle>
+                    <CardDescription className="text-base text-gray-600">
+                      {event.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="p-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -91,7 +108,9 @@ const PastEvents = () => {
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-black mb-2">Event Highlights:</h4>
+                        <h4 className="font-semibold text-black mb-2">
+                          Event Highlights:
+                        </h4>
                         <ul className="text-sm text-gray-600 space-y-1">
                           {event.highlights.map((highlight, index) => (
                             <li key={index} className="flex items-start">
