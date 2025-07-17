@@ -52,14 +52,14 @@ export const UpcomingEventsSection = () => {
                     <span>{event.location}</span>
                   </div>
                 </div>
-                <Button className="w-full mt-4 bg-kerala-red hover:bg-kerala-red/90 text-white">
+                <Button className="w-full mt-4 bg-kerala-red hover:bg-kerala-red/90 text-black">
                   Learn More & Register
                 </Button>
               </CardContent>
             </Card>
           ))}
           <Link to="/events/upcoming">
-            <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 text-white">
+            <Button className="w-full bg-kerala-gold hover:bg-kerala-gold/90 text-black">
               View All Upcoming Events
             </Button>
           </Link>
@@ -68,7 +68,7 @@ export const UpcomingEventsSection = () => {
         <div className="text-center py-8">
           <p className="text-black mb-4">No upcoming events at this time</p>
           <Link to="/events/upcoming">
-            <Button variant="outline" className="text-kerala-blue border-kerala-blue hover:bg-kerala-blue hover:text-white">Check Events Page</Button>
+            <Button variant="outline" className="text-kerala-blue border-kerala-blue hover:bg-kerala-blue hover:text-black">Check Events Page</Button>
           </Link>
         </div>
       )}

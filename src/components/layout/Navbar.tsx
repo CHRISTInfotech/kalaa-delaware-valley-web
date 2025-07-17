@@ -38,11 +38,10 @@ export const Navbar = () => {
   }) => (
     <Link
       to={to}
-      className={`px-4 py-2 rounded-md text-xl font-semibold transition-all duration-200 hover:bg-kerala-gold/10 ${
-        isActive(to)
-          ? 'text-kerala-gold border-b-2 border-kerala-gold'
-          : 'text-black hover:text-kerala-gold'
-      } ${className}`}
+      className={`px-4 py-2 rounded-md text-xl font-semibold transition-all duration-200 hover:bg-kerala-gold/10 ${isActive(to)
+        ? 'text-kerala-gold border-b-2 border-kerala-gold'
+        : 'text-black hover:text-kerala-gold'
+        } ${className}`}
     >
       {children}
     </Link>
@@ -61,12 +60,22 @@ export const Navbar = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="hidden md:block leading-tight">
+            <div className="hidden md:block leading-tight text-black">
               <div className="text-4xl font-serif font-extrabold text-kerala-gold">
-                കലാ
+                {/* KALAA */}
+                <img
+                  src="https://fontmeme.com/permalink/250717/98decc18a30abe3e8084f68e46b259c4.png"
+                  alt="Heading"
+                  className="w-[220px] h-auto mx-auto"
+                />
               </div>
-              <div className="text-base text-gray-700 font-medium">
-                Malayali Association of Delaware Valley
+              <div className="text-base font-medium">
+                {/* Malayali Association of Delaware Valley */}
+                <img
+                  src="https://fontmeme.com/permalink/250717/d5b6ec30dea7b6f593855f39ac3f6700.png"
+                  alt="Subheading"
+                  className="w-[300px] h-auto mx-auto"
+                />
               </div>
             </div>
           </Link>
@@ -80,11 +89,10 @@ export const Navbar = () => {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className={`px-4 py-2 text-xl font-semibold ${
-                    isActive('/events')
-                      ? 'text-kerala-gold'
-                      : 'text-black hover:text-kerala-gold'
-                  }`}
+                  className={`px-4 py-2 text-xl font-semibold ${isActive('/events')
+                    ? 'text-kerala-gold'
+                    : 'text-black hover:text-kerala-gold'
+                    }`}
                 >
                   Events <ChevronDown className="ml-1 h-5 w-5" />
                 </Button>
