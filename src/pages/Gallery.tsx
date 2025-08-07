@@ -58,7 +58,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen py-16 bg-white">
+    <div className="min-h-screen py-16 bg-white" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto px-4">
         {!selectedEvent ? (
           <>

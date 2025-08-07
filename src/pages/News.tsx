@@ -51,7 +51,7 @@ const News = () => {
   const otherNews = newsArticles.filter(article => !article.featured);
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-serif text-black font-bold text-center mb-16">
           News & Updates

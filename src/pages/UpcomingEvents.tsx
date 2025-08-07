@@ -14,7 +14,7 @@ const upcomingEvents = [
     location: "Community Hall, 123 Main St, Philadelphia, PA",
     participants: "200+ expected",
     description: "Join us for the grand Onam celebration with traditional Sadya, cultural programs, and Thiruvathira dance.",
-    image: "/src/components/images/onam.jpg",
+    image: "/src/components/images/onam image.jpg",
     registrationRequired: true,
     fee: "$25 per person"
   },
@@ -34,7 +34,7 @@ const upcomingEvents = [
 
 const UpcomingEvents = () => {
   return (
-    <div className="min-h-screen py-16 bg-white">
+    <div className="min-h-screen py-16 bg-white" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           Upcoming Events

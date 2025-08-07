@@ -48,10 +48,10 @@ export const Navbar = () => {
   );
 
   return (
-    <nav className="sticky w-full bg-white shadow-sm z-50">
+    <nav className="fixed top-0 w-full bg-white shadow-sm z-50">
       <div className="w-full px-4">
         <div className="flex items-center justify-between">
-          {/* Left: Logo and Brand (increased size) */}
+          {/* Left: Logo and Brand */}
           <Link to="/" className="flex items-center space-x-4">
             <div className="w-32 h-26">
               <img
@@ -62,7 +62,6 @@ export const Navbar = () => {
             </div>
             <div className="hidden md:block leading-tight text-black">
               <div className="text-4xl font-serif font-extrabold text-kerala-gold">
-                {/* KALAA */}
                 <img
                   src="https://fontmeme.com/permalink/250717/98decc18a30abe3e8084f68e46b259c4.png"
                   alt="Heading"
@@ -70,7 +69,6 @@ export const Navbar = () => {
                 />
               </div>
               <div className="text-base font-medium">
-                {/* Malayali Association of Delaware Valley */}
                 <img
                   src="https://fontmeme.com/permalink/250717/d5b6ec30dea7b6f593855f39ac3f6700.png"
                   alt="Subheading"
@@ -145,72 +143,18 @@ export const Navbar = () => {
                 </SheetDescription>
               </SheetHeader>
               <div className="flex flex-col space-y-4 mt-8">
-                <Link
-                  to="/"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-black hover:text-kerala-gold"
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/about"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-black hover:text-kerala-gold"
-                >
-                  About Us
-                </Link>
+                <Link to="/" onClick={() => setIsOpen(false)} className="text-lg text-black hover:text-kerala-gold">Home</Link>
+                <Link to="/about" onClick={() => setIsOpen(false)} className="text-lg text-black hover:text-kerala-gold">About Us</Link>
                 <div className="space-y-2">
                   <div className="text-lg font-medium text-black">Events</div>
-                  <Link
-                    to="/events/upcoming"
-                    onClick={() => setIsOpen(false)}
-                    className="text-base text-gray-600 hover:text-kerala-gold ml-4 block"
-                  >
-                    Upcoming Events
-                  </Link>
-                  <Link
-                    to="/events/past"
-                    onClick={() => setIsOpen(false)}
-                    className="text-base text-gray-600 hover:text-kerala-gold ml-4 block"
-                  >
-                    Past Events
-                  </Link>
+                  <Link to="/events/upcoming" onClick={() => setIsOpen(false)} className="text-base text-gray-600 hover:text-kerala-gold ml-4 block">Upcoming Events</Link>
+                  <Link to="/events/past" onClick={() => setIsOpen(false)} className="text-base text-gray-600 hover:text-kerala-gold ml-4 block">Past Events</Link>
                 </div>
-                <Link
-                  to="/gallery"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-black hover:text-kerala-gold"
-                >
-                  Gallery
-                </Link>
-                <Link
-                  to="/team"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-black hover:text-kerala-gold"
-                >
-                  Team
-                </Link>
-                <Link
-                  to="/news"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-black hover:text-kerala-gold"
-                >
-                  News
-                </Link>
-                <Link
-                  to="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-black hover:text-kerala-gold"
-                >
-                  Contact
-                </Link>
-                <Link
-                  to="/membership"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-black hover:text-kerala-gold"
-                >
-                  Membership
-                </Link>
+                <Link to="/gallery" onClick={() => setIsOpen(false)} className="text-lg text-black hover:text-kerala-gold">Gallery</Link>
+                <Link to="/team" onClick={() => setIsOpen(false)} className="text-lg text-black hover:text-kerala-gold">Team</Link>
+                <Link to="/news" onClick={() => setIsOpen(false)} className="text-lg text-black hover:text-kerala-gold">News</Link>
+                <Link to="/contact" onClick={() => setIsOpen(false)} className="text-lg text-black hover:text-kerala-gold">Contact</Link>
+                <Link to="/membership" onClick={() => setIsOpen(false)} className="text-lg text-black hover:text-kerala-gold">Membership</Link>
               </div>
             </SheetContent>
           </Sheet>

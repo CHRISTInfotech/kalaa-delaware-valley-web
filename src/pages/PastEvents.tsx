@@ -17,7 +17,7 @@ const pastEvents = [
     participants: "250+ attendees",
     description:
       "A grand celebration of Onam with traditional Sadya, cultural programs, and Thiruvathira dance performances.",
-    image: "/src/components/images/onam.jpg",
+    image: "/src/components/images/onam image.jpg",
     highlights: [
       "Traditional Onam Sadya for 250+ people",
       "Pookalam competition with 15+ participants",
@@ -58,7 +58,7 @@ const pastEvents = [
 
 const PastEvents = () => {
   return (
-    <div className="min-h-screen py-16 bg-white">
+    <div className="min-h-screen py-16 bg-white" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           Past Events

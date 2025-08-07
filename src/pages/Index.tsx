@@ -8,7 +8,7 @@ import { UpcomingEventsSection } from '@/components/home/UpcomingEventsSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{ marginTop: '8rem' }}>
       <HeroCarousel />
       <WhyJoinSection />
       <VisionMissionSection />

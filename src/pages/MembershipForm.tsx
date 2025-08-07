@@ -90,12 +90,12 @@ const MembershipForm = () => {
   };
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen pt-28 pb-16" style={{ marginTop: '2rem' }}>
       <div className="container mx-auto px-4 max-w-4xl">
-        <div className="mb-8">
+        <div className="mb-8 mt-5">
           <Link to="/membership">
             <Button variant="ghost">
-              <ArrowLeft className="h-4 w-4 mr-2" />
+              <ArrowLeft className="h-4 w-4 mr-2"/>
               Back to Membership
             </Button>
           </Link>

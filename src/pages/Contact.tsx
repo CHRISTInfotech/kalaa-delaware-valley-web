@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-serif font-bold text-kerala-blue text-center mb-16">
           Contact Us

@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="bg-white py-20 px-4">
+    <div className="bg-white py-20 px-4" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto max-w-6xl">
         <h1 className="text-4xl lg:text-5xl font-serif font-bold text-center text-kerala-gold mb-16">
           About Us

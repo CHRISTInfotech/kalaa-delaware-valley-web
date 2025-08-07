@@ -7,13 +7,13 @@ import { Calendar, MapPin, Users, Clock, ArrowLeft } from 'lucide-react';
 
 const eventDetails = {
   1: {
-    title: "Onam Celebration 2025",
+    title: "Onam Celebration 2024",
     date: "September 15, 2025",
     time: "6:00 PM - 10:00 PM",
     location: "Community Hall, 123 Main St, Philadelphia, PA",
     participants: "200+ expected",
     description: "Join us for the grand Onam celebration with traditional Sadya, cultural programs, and Thiruvathira dance.",
-    image: "/src/components/images/onam.jpg",
+    image: "/src/components/images/onam image.jpg",
     registrationRequired: true,
     fee: "$25 per person",
     fullDescription: "Experience the joy and tradition of Onam with our community! This grand celebration will feature authentic Kerala cuisine with a traditional Sadya (feast) served on banana leaves, cultural performances including Thiruvathira dance, Kaikottikali, and classical music. We'll also have a Pookalam (flower carpet) competition and traditional games for all ages.",
