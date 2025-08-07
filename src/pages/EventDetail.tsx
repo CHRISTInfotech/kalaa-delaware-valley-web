@@ -67,7 +67,7 @@ const EventDetail = () => {
   }
 
   return (
-    <div className="min-h-screen py-16 bg-white">
+    <div className="min-h-screen py-16 bg-white" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto px-4">
         <Link to="/events/upcoming" className="inline-flex items-center text-kerala-blue hover:text-kerala-gold mb-8">
           <ArrowLeft className="h-4 w-4 mr-2" />

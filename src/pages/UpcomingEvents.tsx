@@ -21,9 +21,9 @@ const upcomingEvents = [
   {
     id: 2,
     title: "X-mas Celebration 2025",
-    date: "April 14, 2025",
-    time: "5:00 PM - 9:00 PM",
-    location: "KALAA Community Center, Delaware Valley",
+    date: "December 25, 2025",
+    time: "12:00 AM - 10:00 AM",
+    location: "KALAA Community Center, Delaware Valley", 
     participants: "150+ expected",
     description: "A symbol for Jesus Christ's birth, join us for a festive evening with music, dance, and a special Christmas feast.",
     image: "/src/components/images/xmas.jpeg",
