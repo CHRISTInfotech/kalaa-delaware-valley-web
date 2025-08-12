@@ -51,29 +51,37 @@ export const Navbar = () => {
     <nav className="fixed top-0 w-full bg-white shadow-sm z-50">
       <div className="w-full px-4">
         <div className="flex items-center justify-between">
+
           {/* Left: Logo and Brand */}
+
           <Link to="/" className="flex items-center space-x-4">
             <div className="w-32 h-26">
               <img
-                src="/src/components/images/kalaa logo.jpg"
+                src="src/components/images/kalaa logo1.jpg"
                 alt="Kalaa Logo"
                 className="w-full h-full object-contain"
               />
             </div>
+
             <div className="hidden md:block leading-tight text-black">
-              <div className="text-4xl font-serif font-extrabold text-kerala-gold">
-                <img
-                  src="https://fontmeme.com/permalink/250717/98decc18a30abe3e8084f68e46b259c4.png"
-                  alt="Heading"
-                  className="w-[220px] h-auto mx-auto"
-                />
+              {/* Main heading */}
+              <div className="text-4xl font-serif font-extrabold text-kerala-gold flex flex-col items-center">
+                {/* <img
+        src="https://fontmeme.com/permalink/250717/98decc18a30abe3e8084f68e46b259c4.png"
+        alt="Heading"
+        className="w-[220px] h-auto mx-auto"
+      /> */}
+                <span className="mt-1">കല</span>
               </div>
-              <div className="text-base font-medium">
-                <img
-                  src="https://fontmeme.com/permalink/250717/d5b6ec30dea7b6f593855f39ac3f6700.png"
-                  alt="Subheading"
-                  className="w-[300px] h-auto mx-auto"
-                />
+
+              {/* Subheading */}
+              <div className="text-base font-medium flex flex-col items-center">
+                {/* <img
+        src="https://fontmeme.com/permalink/250717/d5b6ec30dea7b6f593855f39ac3f6700.png"
+        alt="Subheading"
+        className="w-[300px] h-auto mx-auto"
+      /> */}
+                <span className="mt-1">MALAYALI ASSOCIATION OF DELWARE VALLEY</span>
               </div>
             </div>
           </Link>
