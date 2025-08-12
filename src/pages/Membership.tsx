@@ -11,13 +11,11 @@ import { Button } from '@/components/ui/button';
 import {
   Check,
   Users,
-  Calendar,
   Heart,
   Star,
-  UserPlus,
   Gift,
-  Info,
   Smile,
+  UserPlus
 } from 'lucide-react';
 
 const membershipBenefits = [
@@ -52,42 +50,55 @@ const membershipTypes = [
   }
 ];
 
-
 const Membership = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="container mx-auto px-4">
         {/* Page Heading */}
         <div className="text-center mb-16" style={{ marginTop: '6rem' }}>
-          <h1 className="text-5xl font-serif font-bold text-kerala-blue mb-4">Become a Member</h1>
-          <p className="text-gray-700 text-lg">Join a vibrant community that celebrates Malayali culture in America</p>
+          <h1 className="text-5xl font-serif font-bold text-kerala-blue mb-4">
+            Become a Member
+          </h1>
+          <p className="text-gray-700 text-lg">
+            Join a vibrant community that celebrates Malayali culture in America
+          </p>
         </div>
 
-        {/* Membership Types */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold text-kerala-blue text-center mb-10 flex justify-center items-center gap-3">
-            <Gift className="text-kerala-gold" />
-            Membership Plans
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {membershipTypes.map((membership, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow border-2 border-gray-200">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 bg-kerala-gold/10 rounded-full flex items-center justify-center mb-4">
-                    <membership.icon className="h-8 w-8 text-kerala-gold" />
-                  </div>
-                  <CardTitle className="text-lg text-kerala-blue">{membership.type}</CardTitle>
-                  <CardDescription className="text-2xl font-bold text-kerala-red">
-                    {membership.fee}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">{membership.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+{/* Membership Types */}
+<section className="mb-20">
+  <h2 className="text-3xl font-bold text-kerala-blue text-center mb-10 flex justify-center items-center gap-3">
+    <Gift className="text-kerala-gold" />
+    Membership Plans
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {membershipTypes.map((membership, index) => (
+      <Link
+        key={index}
+        to="/membership/apply" // direct link to the form page
+        className="block transform hover:scale-105 transition-transform cursor-pointer"
+      >
+        <Card className="text-center hover:shadow-lg transition-shadow border-2 border-gray-200 h-full">
+          <CardHeader>
+            <div className="mx-auto w-16 h-16 bg-kerala-gold/10 rounded-full flex items-center justify-center mb-4">
+              <membership.icon className="h-8 w-8 text-kerala-gold" />
+            </div>
+            <CardTitle className="text-lg text-kerala-blue">
+              {membership.type}
+            </CardTitle>
+            <CardDescription className="text-2xl font-bold text-kerala-red">
+              {membership.fee}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-gray-600">{membership.description}</p>
+          </CardContent>
+        </Card>
+      </Link>
+    ))}
+  </div>
+</section>
+
+
 
         {/* Membership Benefits */}
         <section className="mb-24">
