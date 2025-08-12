@@ -51,47 +51,49 @@ const News = () => {
   const otherNews = newsArticles.filter(article => !article.featured);
 
   return (
-    <div className="min-h-screen py-16" style={{ marginTop: '6rem' }}>
+    <div className="min-h-screen py-20 bg-gray-50" style={{ marginTop: '6rem' }}>
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-serif text-black font-bold text-center mb-16">
+        {/* Page Title */}
+        <h1 className="text-4xl font-serif font-bold text-kerala-gold text-center mb-16">
           News & Updates
         </h1>
 
         {/* Featured News */}
         {featuredNews && (
-          <div className="mb-16">
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div className="mb-20">
+            <Card className="overflow-hidden shadow-lg rounded-2xl border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative h-64 lg:h-full">
+                <div className="relative h-72 lg:h-full">
                   <img
                     src={featuredNews.image}
                     alt={featuredNews.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4 bg-kerala-gold text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">
                     Featured
                   </div>
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col justify-center">
                   <CardHeader className="p-0 mb-4">
-                    <div className="flex items-center text-sm text-gray-500 mb-2">
+                    <div className="flex items-center text-sm text-gray-500 mb-3">
                       <Calendar className="h-4 w-4 mr-2" />
                       {featuredNews.date}
                       <User className="h-4 w-4 ml-4 mr-2" />
                       {featuredNews.author}
                     </div>
-                    <CardTitle className="text-2xl lg:text-3xl text-kerala-blue mb-3">
+                    <CardTitle className="text-3xl text-kerala-blue mb-3">
                       {featuredNews.title}
                     </CardTitle>
-                    <CardDescription className="text-lg leading-relaxed">
+                    <CardDescription className="text-lg leading-relaxed text-gray-700">
                       {featuredNews.excerpt}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="p-0">
-                    <p className="text-gray-700 leading-relaxed mb-6">
+                  <CardContent className="p-0 mt-4">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       {featuredNews.content}
                     </p>
-                    <Button className="bg-white hover:bg-/90">
+                    <Button className="bg-kerala-blue hover:bg-kerala-gold text-white transition-colors">
                       Read Full Story
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -103,14 +105,17 @@ const News = () => {
         )}
 
         {/* Other News */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {otherNews.map((article) => (
-            <Card key={article.id} className="hover:shadow-lg transition-shadow duration-300 group">
-              <div className="relative h-48 overflow-hidden rounded-t-lg">
+            <Card
+              key={article.id}
+              className="hover:shadow-xl transition-shadow duration-300 rounded-2xl border border-gray-200 overflow-hidden"
+            >
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <CardHeader>
@@ -118,17 +123,21 @@ const News = () => {
                   <Calendar className="h-3 w-3 mr-1" />
                   {article.date}
                 </div>
-                <CardTitle className="text-lg text-kerala-blue group-hover:text-kerala-gold transition-colors">
+                <CardTitle className="text-lg text-kerala-blue hover:text-kerala-gold transition-colors duration-300">
                   {article.title}
                 </CardTitle>
-                <CardDescription className="text-sm">
+                <CardDescription className="text-sm text-gray-600">
                   {article.excerpt}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-2">
                   <span className="text-xs text-gray-500">{article.author}</span>
-                  <Button variant="ghost" size="sm" className="text-kerala-blue hover:text-kerala-gold">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-kerala-blue hover:text-kerala-gold"
+                  >
                     Read More
                     <ArrowRight className="ml-1 h-3 w-3" />
                   </Button>

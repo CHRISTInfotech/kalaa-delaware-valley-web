@@ -33,30 +33,25 @@ const membershipBenefits = [
 
 const membershipTypes = [
   {
-    type: "Individual Membership",
-    fee: "$50/year",
-    description: "Perfect for single professionals and students",
+    type: "Annual Individual Membership",
+    fee: "$5/year",
+    description: "Annual/Yearly Individual Fee for everyone who is 18 (Eighteen) years or above.",
     icon: Users
   },
   {
-    type: "Family Membership",
-    fee: "$75/year",
-    description: "Ideal for families with children",
+    type: "Life-Long Family Membership",
+    fee: "$100",
+    description: "Lifetime membership for the entire family, providing permanent access to all benefits.",
     icon: Heart
   },
   {
-    type: "Senior Membership",
-    fee: "$30/year",
-    description: "Special rate for members above 65 years",
+    type: "Life-Long Individual Membership",
+    fee: "$50",
+    description: "Lifetime membership for a single individual, granting permanent access to all benefits.",
     icon: Star
-  },
-  {
-    type: "Student Membership",
-    fee: "$25/year",
-    description: "Discounted rate for full-time students",
-    icon: Calendar
   }
 ];
+
 
 const Membership = () => {
   return (
@@ -74,7 +69,7 @@ const Membership = () => {
             <Gift className="text-kerala-gold" />
             Membership Plans
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {membershipTypes.map((membership, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow border-2 border-gray-200">
                 <CardHeader>

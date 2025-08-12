@@ -95,7 +95,7 @@ const MembershipForm = () => {
         <div className="mb-8 mt-5">
           <Link to="/membership">
             <Button variant="ghost">
-              <ArrowLeft className="h-4 w-4 mr-2"/>
+              <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Membership
             </Button>
           </Link>
@@ -130,15 +130,17 @@ const MembershipForm = () => {
               {/* Membership Type */}
               <div>
                 <h3 className="text-xl font-semibold text-kerala-blue mb-4">Membership Type</h3>
-                <Select onValueChange={(value) => handleSelectChange('membershipType', value)}>
-                  <SelectTrigger>
+                <Select
+                  value={formData.membershipType}
+                  onValueChange={(value) => handleSelectChange('membershipType', value)}
+                >
+                  <SelectTrigger className="bg-white border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500">
                     <SelectValue placeholder="Select Membership Type" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="individual">Individual Membership - $50/year</SelectItem>
-                    <SelectItem value="family">Family Membership - $75/year</SelectItem>
-                    <SelectItem value="senior">Senior Membership - $30/year</SelectItem>
-                    <SelectItem value="student">Student Membership - $25/year</SelectItem>
+                  <SelectContent className="bg-white border border-gray-200 rounded-md shadow-lg">
+                    <SelectItem value="annual-individual">Annual Individual Membership (18+ years) - $5/year</SelectItem>
+                    <SelectItem value="lifelong-family">Life-Long Family Membership - $100 (one-time)</SelectItem>
+                    <SelectItem value="lifelong-individual">Life-Long Individual Membership - $50 (one-time)</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
