@@ -4,7 +4,7 @@ import React from 'react';
 const benefits = [
   {
     icon: "https://cdn-icons-png.flaticon.com/128/3135/3135715.png",
-    title: "350+",
+    title: "1000+",
     description: "Active Members"
   },
   {

@@ -15,7 +15,7 @@ export const Footer = () => {
             <div className="flex items-center space-x-4 mb-4">
               <div className="w-18 h-20">
                 <img
-                  src="/src/components/images/kalaa logo.jpg"
+                  src="/src/components/images/kalaa logo1.jpg"
                   alt="Website Logo"
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -62,7 +62,7 @@ export const Footer = () => {
             <div className="space-y-2 text-sm text-black">
               <p>Delaware Valley, PA</p>
               <p>Email: info@kalaa.org</p>
-              <p>Phone: (555) 123-4567</p>
+              <p>Phone: +1 (484) 535- 1553</p>
             </div>
           </div>
         </div>
