@@ -7,12 +7,12 @@ import { X, ArrowLeft } from 'lucide-react';
 // Import images
 import onam from '@/components/images/onam.jpg';
 import three from '@/components/images/3.jpg';
-import vishu1 from '@/components/images/vishu 1.jpeg';
-import vishu3 from '@/components/images/vishu 3.jpeg';
+import vishu1 from '@/components/images/vishu_1.jpeg';
+import vishu3 from '@/components/images/vishu_3.jpeg';
 import kannikonna from '@/components/images/kannikonna.jpeg';
 import katta from '@/components/images/katta.jpeg';
 import xmas from '@/components/images/xmas.jpeg';
-import xmasImage from '@/components/images/xmas image.jpg';
+import xmasImage from '@/components/images/xmas_image.jpg';
 import cake from '@/components/images/cake.jpeg';
 
 const eventCollections = [

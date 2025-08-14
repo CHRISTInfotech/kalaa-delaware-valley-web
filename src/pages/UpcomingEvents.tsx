@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Users, Clock } from 'lucide-react';
 
 // Import images
-import onamImg from '@/components/images/onam image.jpg';
+import onamImg from '@/components/images/onam_image.jpg';
 import xmasImg from '@/components/images/xmas.jpeg';
 
  const upcomingEvents = [

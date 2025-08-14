@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Users, Clock, ArrowLeft } from 'lucide-react';
 
 // img imports
-import onamImage from '@/components/images/onam image.jpg';
+import onamImage from '@/components/images/onam_image.jpg';
 import xmasImage from '@/components/images/xmas.jpeg';
 
 

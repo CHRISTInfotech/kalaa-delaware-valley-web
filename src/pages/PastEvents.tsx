@@ -9,8 +9,8 @@ import {
 import { Calendar, MapPin, Users } from 'lucide-react';
 
 // ✅ Import images so Vite handles them correctly
-import onamImage from '@/components/images/onam-image.jpg';
-import vishu1 from '@/components/images/vishu-1.jpeg';
+import onamImage from '@/components/images/onam_image.jpg';
+import vishu1 from '@/components/images/vishu_1.jpeg';
 import xmas from '@/components/images/xmas.jpeg';
 
 const pastEvents = [
