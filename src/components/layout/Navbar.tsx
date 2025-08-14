@@ -59,7 +59,7 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center space-x-4">
             <div className="w-32 h-26">
               <img
-                src="{logo}"
+                src={logo}
                 alt="Kalaa Logo"
                 className="w-full h-full object-contain"
               />
