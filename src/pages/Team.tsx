@@ -1,54 +1,56 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
-const teamMembers = [
-  {
-    name: "Sujith Sreedhar",
-    position: "President",
-    image: "src/components/images/Sujith Sreedhar.jpeg"
-  },
-  {
-    name: "Swapna Saji Sebastian",
-    position: "Secretary",
-    image: "src/components/images/Swapna Saji Sebastian .jpeg"
-  },
-  {
-    name: "Shaji Mittathany",
-    position: "Treasurer",
-    image: "src/components/images/Shaji Mittathany .jpeg"
-  },
-  {
-    name: "George V George",
-    position: "Vice President",
-    image: "src/components/images/George V George .jpeg"
-  },
-  {
-    name: "James Joseph",
-    position: "Joint Secretary",
-    image: "src/components/images/James Joseph.jpeg"
-  },
-  {
-    name: "Sibichen Mukkadan",
-    position: "Joint Treasurer",
-    image: "src/components/images/Sibichen Mukkadan.jpeg"
-  }
+// Import team member images
+import sujith from '@/components/images/Sujith Sreedhar.jpeg';
+import swapna from '@/components/images/Swapna Saji Sebastian.jpeg';
+import shaji from '@/components/images/Shaji Mittathany.jpeg';
+import george from '@/components/images/George V George.jpeg';
+import james from '@/components/images/James Joseph.jpeg';
+import sibichen from '@/components/images/Sibichen Mukkadan.jpeg';
+
+// Import committee images
+import bijoy from '@/components/images/Committee/Bejoy Parekadavil.jpg';
+import georgeMathew from '@/components/images/Committee/George Mathew CPA.jpeg';
+import jaiby from '@/components/images/Committee/Jaiby George.jpg';
+import jaimol from '@/components/images/Committee/Jaimol Sreedhar.jpeg';
+import jamesJoseph1 from '@/components/images/Committee/James Joseph (1).jpeg';
+import jerly from '@/components/images/Committee/Jerly Kottor.jpeg';
+import jimmy from '@/components/images/Committee/Jimmy Chacko.jpg';
+import johny from '@/components/images/Committee/Johny Karumathy.jpg';
+import jojo from '@/components/images/Committee/Jojo Kottor.png';
+import joy from '@/components/images/Committee/Joy Karumathy.jpg';
+import saji from '@/components/images/Committee/Saji Sebastian.jpg';
+import sebastian from '@/components/images/Committee/Sebastian Abharam Kizhakethottam.jpg';
+import siby from '@/components/images/Committee/Siby George.png';
+
+// Team members
+ const teamMembers = [
+  { name: "Sujith Sreedhar", position: "President", image: sujith },
+  { name: "Swapna Saji Sebastian", position: "Secretary", image: swapna },
+  { name: "Shaji Mittathany", position: "Treasurer", image: shaji },
+  { name: "George V George", position: "Vice President", image: george },
+  { name: "James Joseph", position: "Joint Secretary", image: james },
+  { name: "Sibichen Mukkadan", position: "Joint Treasurer", image: sibichen }
 ];
 
-const committeeMembers = [
-  { name: "Bijoy Parekadavil", image: "src/components/images/Committee/Bejoy Parekadavil.jpg" },
-  { name: "Member 2", image: "src/components/images/Committee/George Mathew CPA.jpeg" },
-  { name: "Member 3", image: "src/components/images/Committee/Jaiby George.jpg" },
-  { name: "Member 4", image: "src/components/images/Committee/Jaimol Sreedhar.jpeg" },
-  { name: "Member 5", image: "src/components/images/Committee/James Joseph (1).jpeg" },
-  { name: "Member 6", image: "src/components/images/Committee/Jerly Kottor.jpeg" },
-  { name: "Member 7", image: "src/components/images/Committee/Jimmy Chacko.jpg" },
-  { name: "Member 8", image: "src/components/images/Committee/Johny Karumathy.jpg" },
-  { name: "Member 9", image: "src/components/images/Committee/Jojo Kottor.png" },
-  { name: "Member 10", image: "src/components/images/Committee/Joy Karumathy.jpg" },
-  { name: "Member 11", image: "src/components/images/Committee/Saji Sebastian.jpg" },
-  { name: "Member 12", image: "src/components/images/Committee/Sebastian Abharam Kizhakethottam.jpg" },
-  { name: "Member 13", image: "src/components/images/Committee/Siby George.png" }
+// Committee members
+ const committeeMembers = [
+  { name: "Bijoy Parekadavil", image: bijoy },
+  { name: "Member 2", image: georgeMathew },
+  { name: "Member 3", image: jaiby },
+  { name: "Member 4", image: jaimol },
+  { name: "Member 5", image: jamesJoseph1 },
+  { name: "Member 6", image: jerly },
+  { name: "Member 7", image: jimmy },
+  { name: "Member 8", image: johny },
+  { name: "Member 9", image: jojo },
+  { name: "Member 10", image: joy },
+  { name: "Member 11", image: saji },
+  { name: "Member 12", image: sebastian },
+  { name: "Member 13", image: siby }
 ];
+
 
 const Team = () => {
   return (

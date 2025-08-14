@@ -17,6 +17,8 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 
+import logo from '@/components/images/kalaa logo1.jpg';
+
 export const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +59,7 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center space-x-4">
             <div className="w-32 h-26">
               <img
-                src="src/components/images/kalaa logo1.jpg"
+                src="{logo}"
                 alt="Kalaa Logo"
                 className="w-full h-full object-contain"
               />

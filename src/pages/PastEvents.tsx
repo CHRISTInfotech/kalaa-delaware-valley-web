@@ -8,6 +8,11 @@ import {
 } from '@/components/ui/card';
 import { Calendar, MapPin, Users } from 'lucide-react';
 
+// ✅ Import images so Vite handles them correctly
+import onamImage from '@/components/images/onam-image.jpg';
+import vishu1 from '@/components/images/vishu-1.jpeg';
+import xmas from '@/components/images/xmas.jpeg';
+
 const pastEvents = [
   {
     id: 1,
@@ -17,7 +22,7 @@ const pastEvents = [
     participants: "250+ attendees",
     description:
       "A grand celebration of Onam with traditional Sadya, cultural programs, and Thiruvathira dance performances.",
-    image: "/src/components/images/onam image.jpg",
+    image: onamImage,
     highlights: [
       "Traditional Onam Sadya for 250+ people",
       "Pookalam competition with 15+ participants",
@@ -32,7 +37,7 @@ const pastEvents = [
     participants: "180+ attendees",
     description:
       "Malayalam New Year celebration with Vishukkani, traditional feast, and cultural programs.",
-    image: "/src/components/images/vishu 1.jpeg",
+    image: vishu1,
     highlights: [
       "Traditional Vishukkani arrangement",
       "Kaikottikali dance performance",
@@ -47,7 +52,7 @@ const pastEvents = [
     participants: "200+ attendees",
     description:
       "Festive Christmas celebration with carols, cultural programs, and community dinner.",
-    image: "/src/components/images/xmas.jpeg",
+    image: xmas,
     highlights: [
       "Christmas carol singing competition",
       "Cultural dance performances",

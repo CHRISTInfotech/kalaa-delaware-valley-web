@@ -2,25 +2,32 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+// ✅ Import images so Vite bundles them correctly
+import img1 from '@/components/images/1.jpg';
+import img2 from '@/components/images/2.jpg';
+import img3 from '@/components/images/3.jpg';
+import img4 from '@/components/images/4.jpg';
+import imgBoat from '@/components/images/boat.jpg';
+
 const carouselData = [
   {
-    image: "src/components/images/1.jpg",
+    image: img1,
     quote: "Celebrating the rich heritage and vibrant culture of Kerala",
   },
   {
-    image: "src/components/images/2.jpg",
+    image: img2,
     quote: "Unity in diversity, strength in community",
   },
   {
-    image: "src/components/images/3.jpg",
+    image: img3,
     quote: "Where tradition meets modernity",
   },
   {
-    image: "src/components/images/4.jpg",
+    image: img4,
     quote: "Rooted in Culture, Rising with Unity",
   },
-    {
-    image: "src/components/images/boat.jpg",
+  {
+    image: imgBoat,
     quote: "കേരളത്തിന്റെ സംസ്കാരം, അമേരിക്കയിൽ",
   }
 ];

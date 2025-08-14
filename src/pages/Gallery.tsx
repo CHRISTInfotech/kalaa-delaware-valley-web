@@ -4,36 +4,35 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { X, ArrowLeft } from 'lucide-react';
 
+// Import images
+import onam from '@/components/images/onam.jpg';
+import three from '@/components/images/3.jpg';
+import vishu1 from '@/components/images/vishu 1.jpeg';
+import vishu3 from '@/components/images/vishu 3.jpeg';
+import kannikonna from '@/components/images/kannikonna.jpeg';
+import katta from '@/components/images/katta.jpeg';
+import xmas from '@/components/images/xmas.jpeg';
+import xmasImage from '@/components/images/xmas image.jpg';
+import cake from '@/components/images/cake.jpeg';
+
 const eventCollections = [
   {
     id: 1,
     name: "Onam Celebration 2024",
-    coverImage: "src/components/images/onam.jpg",
-    images: [
-      "src/components/images/onam.jpg",
-      "src/components/images/3.jpg",
-      "src/components/images/onam.jpg"
-    ]
+    coverImage: onam,
+    images: [onam, three, onam]
   },
   {
     id: 2,
     name: "Vishu Festival 2024",
-    coverImage: "src/components/images/vishu 1.jpeg",
-    images: [
-      "src/components/images/vishu 3.jpeg",
-      "src/components/images/kannikonna.jpeg",
-      "src/components/images/katta.jpeg"
-    ]
+    coverImage: vishu1,
+    images: [vishu3, kannikonna, katta]
   },
   {
     id: 3,
     name: "Christmas Celebration 2023",
-    coverImage: "src/components/images/xmas.jpeg",
-    images: [
-      "src/components/images/xmas image.jpg",
-      "src/components/images/xmas.jpeg",
-      "src/components/images/cake.jpeg"
-    ]
+    coverImage: xmas,
+    images: [xmasImage, xmas, cake]
   }
 ];
 

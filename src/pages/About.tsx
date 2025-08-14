@@ -1,5 +1,7 @@
 import React from 'react';
 
+import img from '@/components/images/image.png';
+
 const About = () => {
   return (
     <div className="bg-white py-20 px-4" style={{ marginTop: '6rem' }}>
@@ -12,7 +14,7 @@ const About = () => {
           {/* Image Section */}
           <div>
             <img
-              src="src/components/images/image.png"
+              src="{img}"
               alt="KALAA Community"
               className="w-full h-80 object-cover rounded-2xl shadow-md"
             />

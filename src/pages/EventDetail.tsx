@@ -5,6 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Users, Clock, ArrowLeft } from 'lucide-react';
 
+// img imports
+import onamImage from '@/components/images/onam image.jpg';
+import xmasImage from '@/components/images/xmas.jpeg';
+
+
 const eventDetails = {
   1: {
     title: "Onam Celebration 2024",
@@ -13,7 +18,7 @@ const eventDetails = {
     location: "Community Hall, 123 Main St, Philadelphia, PA",
     participants: "200+ expected",
     description: "Join us for the grand Onam celebration with traditional Sadya, cultural programs, and Thiruvathira dance.",
-    image: "/src/components/images/onam image.jpg",
+    image: "{onamImage}",
     registrationRequired: true,
     fee: "$25 per person",
     fullDescription: "Experience the joy and tradition of Onam with our community! This grand celebration will feature authentic Kerala cuisine with a traditional Sadya (feast) served on banana leaves, cultural performances including Thiruvathira dance, Kaikottikali, and classical music. We'll also have a Pookalam (flower carpet) competition and traditional games for all ages.",
@@ -33,7 +38,7 @@ const eventDetails = {
     location: "KALAA Community Center, Delaware Valley",
     participants: "150+ expected",
     description: "Celebrate the Malayalam New Year with traditional rituals, cultural performances, and community feast.",
-    image: "/src/components/images/xmas.jpeg",
+    image: "{xmasImage}",
     registrationRequired: true,
     fee: "$20 per person",
     fullDescription: "Welcome the Malayalam New Year (Vishu) with us! Join our community for traditional Vishukkani arrangements, cultural performances, and a delicious feast featuring traditional Kerala dishes.",

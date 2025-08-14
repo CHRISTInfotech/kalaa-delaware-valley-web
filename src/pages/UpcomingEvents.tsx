@@ -5,7 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Users, Clock } from 'lucide-react';
 
-const upcomingEvents = [
+// Import images
+import onamImg from '@/components/images/onam image.jpg';
+import xmasImg from '@/components/images/xmas.jpeg';
+
+ const upcomingEvents = [
   {
     id: 1,
     title: "Onam Celebration 2025",
@@ -13,8 +17,9 @@ const upcomingEvents = [
     time: "6:00 PM - 10:00 PM",
     location: "Community Hall, 123 Main St, Philadelphia, PA",
     participants: "200+ expected",
-    description: "Join us for the grand Onam celebration with traditional Sadya, cultural programs, and Thiruvathira dance.",
-    image: "/src/components/images/onam image.jpg",
+    description:
+      "Join us for the grand Onam celebration with traditional Sadya, cultural programs, and Thiruvathira dance.",
+    image: onamImg,
     registrationRequired: true,
     fee: "$25 per person"
   },
@@ -23,14 +28,16 @@ const upcomingEvents = [
     title: "X-mas Celebration 2025",
     date: "December 25, 2025",
     time: "12:00 AM - 10:00 AM",
-    location: "KALAA Community Center, Delaware Valley", 
+    location: "KALAA Community Center, Delaware Valley",
     participants: "150+ expected",
-    description: "A symbol for Jesus Christ's birth, join us for a festive evening with music, dance, and a special Christmas feast.",
-    image: "/src/components/images/xmas.jpeg",
+    description:
+      "A symbol for Jesus Christ's birth, join us for a festive evening with music, dance, and a special Christmas feast.",
+    image: xmasImg,
     registrationRequired: true,
     fee: "$20 per person"
   }
 ];
+
 
 const UpcomingEvents = () => {
   return (
