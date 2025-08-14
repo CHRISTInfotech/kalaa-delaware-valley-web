@@ -60,8 +60,8 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4 text-kerala-gold">Contact</h3>
             <div className="space-y-2 text-sm text-black">
-              <p>Delaware Valley, PA</p>
-              <p>Email: info@kalaa.org</p>
+              <p>Philadelphia pa</p>
+              <p>Email: KALAA.MALAYALEE@gmail.com</p>
               <p>Phone: +1 (484) 535- 1553</p>
             </div>
           </div>
