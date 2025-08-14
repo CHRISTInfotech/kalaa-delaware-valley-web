@@ -37,18 +37,18 @@ import siby from '@/components/images/Committee/Siby George.png';
 // Committee members
  const committeeMembers = [
   { name: "Bijoy Parekadavil", image: bijoy },
-  { name: "Member 2", image: georgeMathew },
-  { name: "Member 3", image: jaiby },
-  { name: "Member 4", image: jaimol },
-  { name: "Member 5", image: jamesJoseph1 },
-  { name: "Member 6", image: jerly },
-  { name: "Member 7", image: jimmy },
-  { name: "Member 8", image: johny },
-  { name: "Member 9", image: jojo },
-  { name: "Member 10", image: joy },
-  { name: "Member 11", image: saji },
-  { name: "Member 12", image: sebastian },
-  { name: "Member 13", image: siby }
+  { name: "George Mathew", image: georgeMathew },
+  { name: "Jaiby George", image: jaiby },
+  { name: "Jaimol Sreedhar", image: jaimol },
+  { name: "James Joseph ", image: jamesJoseph1 },
+  { name: "Jerly Kottor", image: jerly },
+  { name: "Jimmy Chacko", image: jimmy },
+  { name: "Johny Karumathy", image: johny },
+  { name: "Jojo Kottor", image: jojo },
+  { name: "Joy Karumathy", image: joy },
+  { name: "Saji Sebastian", image: saji },
+  { name: "Sebastian Abharam Kizhakethottam", image: sebastian },
+  { name: "Siby george", image: siby }
 ];
 
 
