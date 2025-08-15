@@ -3,10 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-const REPO_NAME = "kalaa-delaware-valley-web"; // <-- change to your repo name
-
 export default defineConfig(({ mode }) => ({
-  base: `/${REPO_NAME}/`, // <-- important for GitHub Pages
+  base: "/",
   server: {
     host: "::",
     port: 8080,
