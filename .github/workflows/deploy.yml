@@ -30,8 +30,17 @@ jobs:
       - name: Install deps
         run: npm ci
 
+      # ⚠️ Make sure vite.config.js has: base: '/kalaa-delaware-valley-web/'
       - name: Build
         run: npm run build
+
+      # SPA fallback (important for GitHub Pages routing)
+      - name: Add 404.html and .nojekyll
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
+          # If you use a custom domain, uncomment the next line:
+          # echo "kalaamalayaliassn.org" > dist/CNAME
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -39,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # Vite outputs to 'dist'
+          path: ./dist
 
   deploy:
     environment:
