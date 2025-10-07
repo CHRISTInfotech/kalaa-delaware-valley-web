@@ -64,10 +64,10 @@ const MembershipForm = () => {
 
     emailjs
       .send(
-        'service_nwsw6vd',     // ⬅️ Replace this
-        'template_vbz9b3f',    // ⬅️ Replace this
+        'service_g4gc6no',     // ⬅️ Replace this
+        'template_ckn1kzo',    // ⬅️ Replace this
         templateParams,
-        'tcrEt3k1ti2NzxTg3'      // ⬅️ Replace this
+        'uRcRvZ65Cfuh3LBrg'      // ⬅️ Replace this
       )
       .then(() => {
         alert('Membership application submitted successfully!');

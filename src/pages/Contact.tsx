@@ -44,10 +44,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_nwsw6vd', // 🔁 Replace with your EmailJS service ID
-        'template_9dys5nr', // 🔁 Replace with your EmailJS template ID
+        'service_g4gc6no', // 🔁 Replace with your EmailJS service ID
+        'template_2gx215g', // 🔁 Replace with your EmailJS template ID
         templateParams,
-        'tcrEt3k1ti2NzxTg3' // 🔁 Replace with your EmailJS public key
+        'uRcRvZ65Cfuh3LBrg' // 🔁 Replace with your EmailJS public key
       )
       .then(() => {
         alert('Thank you! Your message has been sent.');
