@@ -97,8 +97,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-black mb-1">Email</h3>
-                      <p className="text-gray-600">info@kalaa.org</p>
-                      <p className="text-gray-600">events@kalaa.org</p>
+                      <p className="text-gray-600"> KALAA.malayalee@gmail.com</p>                      
                     </div>
                   </div>
                 </CardContent>
@@ -112,8 +111,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-kerala-blue mb-1">Phone</h3>
-                      <p className="text-gray-600">(555) 123-4567</p>
-                      <p className="text-gray-600">(555) 123-4568 (Events)</p>
+                      <p className="text-gray-600"> 4845351553</p>                      
                     </div>
                   </div>
                 </CardContent>
@@ -128,11 +126,11 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-kerala-blue mb-1">Address</h3>
                       <p className="text-gray-600">
-                        KALAA Community Center
+                        1200 Bustleton Pike, 
                         <br />
-                        123 Main Street
+                         Feasterville-Trevose,
                         <br />
-                        Philadelphia, PA 19103
+                        PA 19053
                       </p>
                     </div>
                   </div>

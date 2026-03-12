@@ -62,7 +62,7 @@ export const Footer = () => {
             <div className="space-y-2 text-sm text-black">
               <p>Philadelphia pa</p>
               <p>Email: KALAA.MALAYALEE@gmail.com</p>
-              <p>Phone: +1 (484) 535- 1553</p>
+              <p>Phone: 4845351553</p>
             </div>
           </div>
         </div>
@@ -71,7 +71,12 @@ export const Footer = () => {
       {/* Bottom Line Full Width */}
       <div className="w-full border-t border-gray-600">
         <div className="text-center text-sm text-black py-4">
-          <p>&copy; {new Date().getFullYear()} Copyright CHRIST Infotech. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Copyright
+            <a href="https://christinfotech.org/" target="_blank" class="ms-1 link-primary text-decoration-underline">
+              CHRIST Infotech
+            </a>. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
