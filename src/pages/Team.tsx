@@ -70,7 +70,7 @@ const Team = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-contain rounded-full border-4 border-kerala-gold bg-white"
+                    className="w-full h-full object-contain rounded-full bg-white"
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-black mb-2">
@@ -96,7 +96,7 @@ const Team = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover rounded-full border-2 border-kerala-gold bg-white"
+                  className="w-full h-full object-cover rounded-full bg-white"
                 />
               </div>
               <p className="text-lg font-medium text-black">
